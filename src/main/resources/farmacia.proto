@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_package = "com.distribuidos.rcp";
+
+service farmacia{
+  rpc alta(AltaRequest) returns (APIResponse);
+  rpc baja(BajaRequest) returns (APIResponse);
+}
+
+message AltaRequest{
+  string id = 1;
+  string nombreMedicamento = 2;
+}
+
+message BajaRequest{
+  string id = 1;
+}
+
+message APIResponse{
+  string responseMessage = 1;
+  string responseCode = 2;
+}
