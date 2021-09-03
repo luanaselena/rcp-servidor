@@ -9,7 +9,10 @@ service farmacia{
 
 message AltaRequest{
   string id = 1;
-  string nombreMedicamento = 2;
+  string nombre = 2;
+  string codigo = 3;
+  string droga = 4;
+  string tipo = 5;
 }
 
 message BajaRequest{

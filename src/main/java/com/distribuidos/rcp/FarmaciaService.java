@@ -10,10 +10,13 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     public void alta(Farmacia.AltaRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
         System.out.println("alta");
         String id = request.getId();
-        String nombreMedicamento = request.getNombreMedicamento();
+        String nombre = request.getNombre();
+        String codigo = request.getCodigo();
+        String droga = request.getDroga();
+        String tipo = request.getTipo();
 
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        if(nombreMedicamento.equals(id)) {
+        if(nombre.equals(id)) {
             response.setResponseCode("0").setResponseMessage("OK");
         }
         else{

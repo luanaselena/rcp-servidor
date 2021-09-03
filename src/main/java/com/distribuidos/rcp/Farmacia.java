@@ -29,14 +29,44 @@ public final class Farmacia {
         getIdBytes();
 
     /**
-     * <code>string nombreMedicamento = 2;</code>
+     * <code>string nombre = 2;</code>
      */
-    java.lang.String getNombreMedicamento();
+    java.lang.String getNombre();
     /**
-     * <code>string nombreMedicamento = 2;</code>
+     * <code>string nombre = 2;</code>
      */
     com.google.protobuf.ByteString
-        getNombreMedicamentoBytes();
+        getNombreBytes();
+
+    /**
+     * <code>string codigo = 3;</code>
+     */
+    java.lang.String getCodigo();
+    /**
+     * <code>string codigo = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getCodigoBytes();
+
+    /**
+     * <code>string droga = 4;</code>
+     */
+    java.lang.String getDroga();
+    /**
+     * <code>string droga = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getDrogaBytes();
+
+    /**
+     * <code>string tipo = 5;</code>
+     */
+    java.lang.String getTipo();
+    /**
+     * <code>string tipo = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getTipoBytes();
   }
   /**
    * Protobuf type {@code AltaRequest}
@@ -52,7 +82,10 @@ public final class Farmacia {
     }
     private AltaRequest() {
       id_ = "";
-      nombreMedicamento_ = "";
+      nombre_ = "";
+      codigo_ = "";
+      droga_ = "";
+      tipo_ = "";
     }
 
     @java.lang.Override
@@ -88,7 +121,25 @@ public final class Farmacia {
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              nombreMedicamento_ = s;
+              nombre_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              codigo_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              droga_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tipo_ = s;
               break;
             }
             default: {
@@ -157,34 +208,136 @@ public final class Farmacia {
       }
     }
 
-    public static final int NOMBREMEDICAMENTO_FIELD_NUMBER = 2;
-    private volatile java.lang.Object nombreMedicamento_;
+    public static final int NOMBRE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nombre_;
     /**
-     * <code>string nombreMedicamento = 2;</code>
+     * <code>string nombre = 2;</code>
      */
-    public java.lang.String getNombreMedicamento() {
-      java.lang.Object ref = nombreMedicamento_;
+    public java.lang.String getNombre() {
+      java.lang.Object ref = nombre_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        nombreMedicamento_ = s;
+        nombre_ = s;
         return s;
       }
     }
     /**
-     * <code>string nombreMedicamento = 2;</code>
+     * <code>string nombre = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getNombreMedicamentoBytes() {
-      java.lang.Object ref = nombreMedicamento_;
+        getNombreBytes() {
+      java.lang.Object ref = nombre_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        nombreMedicamento_ = b;
+        nombre_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CODIGO_FIELD_NUMBER = 3;
+    private volatile java.lang.Object codigo_;
+    /**
+     * <code>string codigo = 3;</code>
+     */
+    public java.lang.String getCodigo() {
+      java.lang.Object ref = codigo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        codigo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string codigo = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCodigoBytes() {
+      java.lang.Object ref = codigo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        codigo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DROGA_FIELD_NUMBER = 4;
+    private volatile java.lang.Object droga_;
+    /**
+     * <code>string droga = 4;</code>
+     */
+    public java.lang.String getDroga() {
+      java.lang.Object ref = droga_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        droga_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string droga = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDrogaBytes() {
+      java.lang.Object ref = droga_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        droga_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIPO_FIELD_NUMBER = 5;
+    private volatile java.lang.Object tipo_;
+    /**
+     * <code>string tipo = 5;</code>
+     */
+    public java.lang.String getTipo() {
+      java.lang.Object ref = tipo_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tipo_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tipo = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTipoBytes() {
+      java.lang.Object ref = tipo_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tipo_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -208,8 +361,17 @@ public final class Farmacia {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (!getNombreMedicamentoBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nombreMedicamento_);
+      if (!getNombreBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nombre_);
+      }
+      if (!getCodigoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, codigo_);
+      }
+      if (!getDrogaBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, droga_);
+      }
+      if (!getTipoBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tipo_);
       }
       unknownFields.writeTo(output);
     }
@@ -223,8 +385,17 @@ public final class Farmacia {
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (!getNombreMedicamentoBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nombreMedicamento_);
+      if (!getNombreBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nombre_);
+      }
+      if (!getCodigoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, codigo_);
+      }
+      if (!getDrogaBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, droga_);
+      }
+      if (!getTipoBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, tipo_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -244,8 +415,14 @@ public final class Farmacia {
       boolean result = true;
       result = result && getId()
           .equals(other.getId());
-      result = result && getNombreMedicamento()
-          .equals(other.getNombreMedicamento());
+      result = result && getNombre()
+          .equals(other.getNombre());
+      result = result && getCodigo()
+          .equals(other.getCodigo());
+      result = result && getDroga()
+          .equals(other.getDroga());
+      result = result && getTipo()
+          .equals(other.getTipo());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -259,8 +436,14 @@ public final class Farmacia {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      hash = (37 * hash) + NOMBREMEDICAMENTO_FIELD_NUMBER;
-      hash = (53 * hash) + getNombreMedicamento().hashCode();
+      hash = (37 * hash) + NOMBRE_FIELD_NUMBER;
+      hash = (53 * hash) + getNombre().hashCode();
+      hash = (37 * hash) + CODIGO_FIELD_NUMBER;
+      hash = (53 * hash) + getCodigo().hashCode();
+      hash = (37 * hash) + DROGA_FIELD_NUMBER;
+      hash = (53 * hash) + getDroga().hashCode();
+      hash = (37 * hash) + TIPO_FIELD_NUMBER;
+      hash = (53 * hash) + getTipo().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -396,7 +579,13 @@ public final class Farmacia {
         super.clear();
         id_ = "";
 
-        nombreMedicamento_ = "";
+        nombre_ = "";
+
+        codigo_ = "";
+
+        droga_ = "";
+
+        tipo_ = "";
 
         return this;
       }
@@ -425,7 +614,10 @@ public final class Farmacia {
       public com.distribuidos.rcp.Farmacia.AltaRequest buildPartial() {
         com.distribuidos.rcp.Farmacia.AltaRequest result = new com.distribuidos.rcp.Farmacia.AltaRequest(this);
         result.id_ = id_;
-        result.nombreMedicamento_ = nombreMedicamento_;
+        result.nombre_ = nombre_;
+        result.codigo_ = codigo_;
+        result.droga_ = droga_;
+        result.tipo_ = tipo_;
         onBuilt();
         return result;
       }
@@ -478,8 +670,20 @@ public final class Farmacia {
           id_ = other.id_;
           onChanged();
         }
-        if (!other.getNombreMedicamento().isEmpty()) {
-          nombreMedicamento_ = other.nombreMedicamento_;
+        if (!other.getNombre().isEmpty()) {
+          nombre_ = other.nombre_;
+          onChanged();
+        }
+        if (!other.getCodigo().isEmpty()) {
+          codigo_ = other.codigo_;
+          onChanged();
+        }
+        if (!other.getDroga().isEmpty()) {
+          droga_ = other.droga_;
+          onChanged();
+        }
+        if (!other.getTipo().isEmpty()) {
+          tipo_ = other.tipo_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -580,71 +784,278 @@ public final class Farmacia {
         return this;
       }
 
-      private java.lang.Object nombreMedicamento_ = "";
+      private java.lang.Object nombre_ = "";
       /**
-       * <code>string nombreMedicamento = 2;</code>
+       * <code>string nombre = 2;</code>
        */
-      public java.lang.String getNombreMedicamento() {
-        java.lang.Object ref = nombreMedicamento_;
+      public java.lang.String getNombre() {
+        java.lang.Object ref = nombre_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          nombreMedicamento_ = s;
+          nombre_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string nombreMedicamento = 2;</code>
+       * <code>string nombre = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getNombreMedicamentoBytes() {
-        java.lang.Object ref = nombreMedicamento_;
+          getNombreBytes() {
+        java.lang.Object ref = nombre_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          nombreMedicamento_ = b;
+          nombre_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string nombreMedicamento = 2;</code>
+       * <code>string nombre = 2;</code>
        */
-      public Builder setNombreMedicamento(
+      public Builder setNombre(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        nombreMedicamento_ = value;
+        nombre_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string nombreMedicamento = 2;</code>
+       * <code>string nombre = 2;</code>
        */
-      public Builder clearNombreMedicamento() {
+      public Builder clearNombre() {
         
-        nombreMedicamento_ = getDefaultInstance().getNombreMedicamento();
+        nombre_ = getDefaultInstance().getNombre();
         onChanged();
         return this;
       }
       /**
-       * <code>string nombreMedicamento = 2;</code>
+       * <code>string nombre = 2;</code>
        */
-      public Builder setNombreMedicamentoBytes(
+      public Builder setNombreBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        nombreMedicamento_ = value;
+        nombre_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object codigo_ = "";
+      /**
+       * <code>string codigo = 3;</code>
+       */
+      public java.lang.String getCodigo() {
+        java.lang.Object ref = codigo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          codigo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string codigo = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCodigoBytes() {
+        java.lang.Object ref = codigo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          codigo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string codigo = 3;</code>
+       */
+      public Builder setCodigo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        codigo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string codigo = 3;</code>
+       */
+      public Builder clearCodigo() {
+        
+        codigo_ = getDefaultInstance().getCodigo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string codigo = 3;</code>
+       */
+      public Builder setCodigoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        codigo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object droga_ = "";
+      /**
+       * <code>string droga = 4;</code>
+       */
+      public java.lang.String getDroga() {
+        java.lang.Object ref = droga_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          droga_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string droga = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDrogaBytes() {
+        java.lang.Object ref = droga_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          droga_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string droga = 4;</code>
+       */
+      public Builder setDroga(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        droga_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string droga = 4;</code>
+       */
+      public Builder clearDroga() {
+        
+        droga_ = getDefaultInstance().getDroga();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string droga = 4;</code>
+       */
+      public Builder setDrogaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        droga_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object tipo_ = "";
+      /**
+       * <code>string tipo = 5;</code>
+       */
+      public java.lang.String getTipo() {
+        java.lang.Object ref = tipo_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tipo_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tipo = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTipoBytes() {
+        java.lang.Object ref = tipo_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          tipo_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tipo = 5;</code>
+       */
+      public Builder setTipo(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        tipo_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tipo = 5;</code>
+       */
+      public Builder clearTipo() {
+        
+        tipo_ = getDefaultInstance().getTipo();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tipo = 5;</code>
+       */
+      public Builder setTipoBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        tipo_ = value;
         onChanged();
         return this;
       }
@@ -1962,13 +2373,14 @@ public final class Farmacia {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016farmacia.proto\"4\n\013AltaRequest\022\n\n\002id\030\001 " +
-      "\001(\t\022\031\n\021nombreMedicamento\030\002 \001(\t\"\031\n\013BajaRe" +
-      "quest\022\n\n\002id\030\001 \001(\t\"<\n\013APIResponse\022\027\n\017resp" +
-      "onseMessage\030\001 \001(\t\022\024\n\014responseCode\030\002 \001(\t2" +
-      "R\n\010farmacia\022\"\n\004alta\022\014.AltaRequest\032\014.APIR" +
-      "esponse\022\"\n\004baja\022\014.BajaRequest\032\014.APIRespo" +
-      "nseB\026\n\024com.distribuidos.rcpb\006proto3"
+      "\n\016farmacia.proto\"V\n\013AltaRequest\022\n\n\002id\030\001 " +
+      "\001(\t\022\016\n\006nombre\030\002 \001(\t\022\016\n\006codigo\030\003 \001(\t\022\r\n\005d" +
+      "roga\030\004 \001(\t\022\014\n\004tipo\030\005 \001(\t\"\031\n\013BajaRequest\022" +
+      "\n\n\002id\030\001 \001(\t\"<\n\013APIResponse\022\027\n\017responseMe" +
+      "ssage\030\001 \001(\t\022\024\n\014responseCode\030\002 \001(\t2R\n\010far" +
+      "macia\022\"\n\004alta\022\014.AltaRequest\032\014.APIRespons" +
+      "e\022\"\n\004baja\022\014.BajaRequest\032\014.APIResponseB\026\n" +
+      "\024com.distribuidos.rcpb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1987,7 +2399,7 @@ public final class Farmacia {
     internal_static_AltaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AltaRequest_descriptor,
-        new java.lang.String[] { "Id", "NombreMedicamento", });
+        new java.lang.String[] { "Id", "Nombre", "Codigo", "Droga", "Tipo", });
     internal_static_BajaRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_BajaRequest_fieldAccessorTable = new
