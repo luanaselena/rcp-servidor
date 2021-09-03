@@ -13,18 +13,18 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class Medicament {
+public class Medicamento {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 
-	private String name;
+	private String nombre;
 
-	private String code;
+	private String codigo;
 
-	private String drug;
+	private String droga;
 
-	private String type;
+	private String tipo;
 
 }
