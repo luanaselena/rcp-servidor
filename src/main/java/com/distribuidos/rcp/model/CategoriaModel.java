@@ -21,7 +21,7 @@ import lombok.Setter;
 @Table(name = "categoria")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Categoria {
+public class CategoriaModel {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
@@ -31,6 +31,6 @@ public class Categoria {
 	@Getter @Setter private boolean baja ;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria")
-	@Getter @Setter private Set<Medicamento> medicamentos = new HashSet<>();
+	@Getter @Setter private Set<MedicamentoModel> medicamentos = new HashSet<>();
 
 }

@@ -18,7 +18,7 @@ import lombok.Setter;
 @Table(name = "medicamento")
 @Getter
 @Setter
-public class Medicamento {
+public class MedicamentoModel {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,6 +33,6 @@ public class Medicamento {
 
 	@ManyToOne
     @JoinColumn(name = "FK_CATEGORIA", nullable = false, updatable = false)
-	private Categoria categoria;
+	private CategoriaModel categoria;
 
 }
