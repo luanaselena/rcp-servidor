@@ -3,6 +3,7 @@ package com.distribuidos.rcp.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -22,9 +23,11 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Categoria {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
 	@Getter @Setter private long id ;
 	@Getter @Setter private String nombre ;
+	@Column(columnDefinition = "boolean default false")
 	@Getter @Setter private boolean baja ;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria")
