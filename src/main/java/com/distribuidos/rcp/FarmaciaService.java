@@ -2,26 +2,23 @@ package com.distribuidos.rcp;
 
 import com.distribuidos.rcp.Farmacia;
 import com.distribuidos.rcp.farmaciaGrpc;
+import com.distribuidos.rcp.model.MedicamentoModel;
 import io.grpc.stub.StreamObserver;
 
 public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
 
     @Override
     public void alta(Farmacia.AltaRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
-        System.out.println("alta");
-        String id = request.getId();
+
         String nombre = request.getNombre();
         String codigo = request.getCodigo();
         String droga = request.getDroga();
         String tipo = request.getTipo();
 
+        new MedicamentoModel(nombre,codigo,droga);
+
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        if(nombre.equals(id)) {
-            response.setResponseCode("0").setResponseMessage("OK");
-        }
-        else{
-            response.setResponseCode("1").setResponseMessage("NO OK");
-        }
+        response.setResponseCode("0").setResponseMessage("OK");
 
         //aca se envia la respuesta
         responseObserver.onNext(response.build());

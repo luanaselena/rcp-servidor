@@ -35,4 +35,9 @@ public class MedicamentoModel {
     @JoinColumn(name = "FK_CATEGORIA", nullable = false, updatable = false)
 	private CategoriaModel categoria;
 
+	public MedicamentoModel(String nombre, String codigo, String droga) {
+		this.nombre = nombre;
+		this.codigo = codigo;
+		this.droga = droga;
+	}
 }
