@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_package = "com.distribuidos.rcp.services";
+
+service categoria{
+  rpc alta(AltaRequest) returns (APIResponse);
+  rpc baja(BajaRequest) returns (APIResponse);
+}
+
+message AltaRequest{
+  int64 id = 1;
+  string nombre = 2;
+  bool baja = 3;
+}
+
+message BajaRequest{
+  int64 id = 1;
+}
+
+message APIResponse{
+  string responseMessage = 1;
+  string responseCode = 2;
+}
