@@ -2,12 +2,15 @@ syntax = "proto3";
 
 option java_package = "com.distribuidos.rcp";
 
-service farmacia{
-  rpc alta(AltaRequest) returns (APIResponse);
+service MedicamentoService{
+  rpc alta(MedicamentoDTO) returns (APIResponse);
   rpc baja(BajaRequest) returns (APIResponse);
+  rpc getList(Empty) returns (MedicamentoListResponse);
 }
 
-message AltaRequest{
+message Empty{}
+
+message MedicamentoDTO{
   string id = 1;
   string nombre = 2;
   string codigo = 3;
@@ -17,6 +20,10 @@ message AltaRequest{
 
 message BajaRequest{
   string id = 1;
+}
+
+message MedicamentoListResponse{
+  repeated MedicamentoDTO medicamentos =1;
 }
 
 message APIResponse{

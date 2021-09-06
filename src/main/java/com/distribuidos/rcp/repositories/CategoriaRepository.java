@@ -5,7 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import com.distribuidos.rcp.model.CategoriaModel;
 
+import java.util.List;
+
 @Repository
 public interface CategoriaRepository extends CrudRepository<CategoriaModel, Long> {
+
+    List<CategoriaModel> findAll();
 
 }
