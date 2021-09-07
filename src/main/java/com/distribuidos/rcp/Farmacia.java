@@ -1662,6 +1662,1793 @@ public final class Farmacia {
 
   }
 
+  public interface AltaTipoRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:AltaTipoRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>string nombre = 2;</code>
+     */
+    java.lang.String getNombre();
+    /**
+     * <code>string nombre = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getNombreBytes();
+  }
+  /**
+   * Protobuf type {@code AltaTipoRequest}
+   */
+  public  static final class AltaTipoRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:AltaTipoRequest)
+      AltaTipoRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AltaTipoRequest.newBuilder() to construct.
+    private AltaTipoRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AltaTipoRequest() {
+      id_ = "";
+      nombre_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AltaTipoRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              nombre_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.distribuidos.rcp.Farmacia.internal_static_AltaTipoRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.distribuidos.rcp.Farmacia.internal_static_AltaTipoRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.distribuidos.rcp.Farmacia.AltaTipoRequest.class, com.distribuidos.rcp.Farmacia.AltaTipoRequest.Builder.class);
+    }
+
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int NOMBRE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object nombre_;
+    /**
+     * <code>string nombre = 2;</code>
+     */
+    public java.lang.String getNombre() {
+      java.lang.Object ref = nombre_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        nombre_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string nombre = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getNombreBytes() {
+      java.lang.Object ref = nombre_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        nombre_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
+      if (!getNombreBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nombre_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getNombreBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nombre_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.distribuidos.rcp.Farmacia.AltaTipoRequest)) {
+        return super.equals(obj);
+      }
+      com.distribuidos.rcp.Farmacia.AltaTipoRequest other = (com.distribuidos.rcp.Farmacia.AltaTipoRequest) obj;
+
+      boolean result = true;
+      result = result && getId()
+          .equals(other.getId());
+      result = result && getNombre()
+          .equals(other.getNombre());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + NOMBRE_FIELD_NUMBER;
+      hash = (53 * hash) + getNombre().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.distribuidos.rcp.Farmacia.AltaTipoRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code AltaTipoRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:AltaTipoRequest)
+        com.distribuidos.rcp.Farmacia.AltaTipoRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.distribuidos.rcp.Farmacia.internal_static_AltaTipoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.distribuidos.rcp.Farmacia.internal_static_AltaTipoRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.distribuidos.rcp.Farmacia.AltaTipoRequest.class, com.distribuidos.rcp.Farmacia.AltaTipoRequest.Builder.class);
+      }
+
+      // Construct using com.distribuidos.rcp.Farmacia.AltaTipoRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        id_ = "";
+
+        nombre_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.distribuidos.rcp.Farmacia.internal_static_AltaTipoRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.AltaTipoRequest getDefaultInstanceForType() {
+        return com.distribuidos.rcp.Farmacia.AltaTipoRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.AltaTipoRequest build() {
+        com.distribuidos.rcp.Farmacia.AltaTipoRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.AltaTipoRequest buildPartial() {
+        com.distribuidos.rcp.Farmacia.AltaTipoRequest result = new com.distribuidos.rcp.Farmacia.AltaTipoRequest(this);
+        result.id_ = id_;
+        result.nombre_ = nombre_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.distribuidos.rcp.Farmacia.AltaTipoRequest) {
+          return mergeFrom((com.distribuidos.rcp.Farmacia.AltaTipoRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.distribuidos.rcp.Farmacia.AltaTipoRequest other) {
+        if (other == com.distribuidos.rcp.Farmacia.AltaTipoRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getNombre().isEmpty()) {
+          nombre_ = other.nombre_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.distribuidos.rcp.Farmacia.AltaTipoRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.distribuidos.rcp.Farmacia.AltaTipoRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object nombre_ = "";
+      /**
+       * <code>string nombre = 2;</code>
+       */
+      public java.lang.String getNombre() {
+        java.lang.Object ref = nombre_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          nombre_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string nombre = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getNombreBytes() {
+        java.lang.Object ref = nombre_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          nombre_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string nombre = 2;</code>
+       */
+      public Builder setNombre(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        nombre_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nombre = 2;</code>
+       */
+      public Builder clearNombre() {
+        
+        nombre_ = getDefaultInstance().getNombre();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string nombre = 2;</code>
+       */
+      public Builder setNombreBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        nombre_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:AltaTipoRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:AltaTipoRequest)
+    private static final com.distribuidos.rcp.Farmacia.AltaTipoRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.distribuidos.rcp.Farmacia.AltaTipoRequest();
+    }
+
+    public static com.distribuidos.rcp.Farmacia.AltaTipoRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AltaTipoRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AltaTipoRequest>() {
+      @java.lang.Override
+      public AltaTipoRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AltaTipoRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AltaTipoRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AltaTipoRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.distribuidos.rcp.Farmacia.AltaTipoRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BusquedaPorPalabraRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BusquedaPorPalabraRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string palabra = 1;</code>
+     */
+    java.lang.String getPalabra();
+    /**
+     * <code>string palabra = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getPalabraBytes();
+  }
+  /**
+   * Protobuf type {@code BusquedaPorPalabraRequest}
+   */
+  public  static final class BusquedaPorPalabraRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:BusquedaPorPalabraRequest)
+      BusquedaPorPalabraRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BusquedaPorPalabraRequest.newBuilder() to construct.
+    private BusquedaPorPalabraRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BusquedaPorPalabraRequest() {
+      palabra_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BusquedaPorPalabraRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              palabra_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorPalabraRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorPalabraRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.class, com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.Builder.class);
+    }
+
+    public static final int PALABRA_FIELD_NUMBER = 1;
+    private volatile java.lang.Object palabra_;
+    /**
+     * <code>string palabra = 1;</code>
+     */
+    public java.lang.String getPalabra() {
+      java.lang.Object ref = palabra_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        palabra_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string palabra = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPalabraBytes() {
+      java.lang.Object ref = palabra_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        palabra_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getPalabraBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, palabra_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getPalabraBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, palabra_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest)) {
+        return super.equals(obj);
+      }
+      com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest other = (com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest) obj;
+
+      boolean result = true;
+      result = result && getPalabra()
+          .equals(other.getPalabra());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PALABRA_FIELD_NUMBER;
+      hash = (53 * hash) + getPalabra().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BusquedaPorPalabraRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:BusquedaPorPalabraRequest)
+        com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorPalabraRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorPalabraRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.class, com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.Builder.class);
+      }
+
+      // Construct using com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        palabra_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorPalabraRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest getDefaultInstanceForType() {
+        return com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest build() {
+        com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest buildPartial() {
+        com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest result = new com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest(this);
+        result.palabra_ = palabra_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest) {
+          return mergeFrom((com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest other) {
+        if (other == com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.getDefaultInstance()) return this;
+        if (!other.getPalabra().isEmpty()) {
+          palabra_ = other.palabra_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object palabra_ = "";
+      /**
+       * <code>string palabra = 1;</code>
+       */
+      public java.lang.String getPalabra() {
+        java.lang.Object ref = palabra_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          palabra_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string palabra = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPalabraBytes() {
+        java.lang.Object ref = palabra_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          palabra_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string palabra = 1;</code>
+       */
+      public Builder setPalabra(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        palabra_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string palabra = 1;</code>
+       */
+      public Builder clearPalabra() {
+        
+        palabra_ = getDefaultInstance().getPalabra();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string palabra = 1;</code>
+       */
+      public Builder setPalabraBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        palabra_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:BusquedaPorPalabraRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:BusquedaPorPalabraRequest)
+    private static final com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest();
+    }
+
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BusquedaPorPalabraRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BusquedaPorPalabraRequest>() {
+      @java.lang.Override
+      public BusquedaPorPalabraRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BusquedaPorPalabraRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BusquedaPorPalabraRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BusquedaPorPalabraRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface BusquedaPorLetraRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BusquedaPorLetraRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string letra = 1;</code>
+     */
+    java.lang.String getLetra();
+    /**
+     * <code>string letra = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getLetraBytes();
+  }
+  /**
+   * Protobuf type {@code BusquedaPorLetraRequest}
+   */
+  public  static final class BusquedaPorLetraRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:BusquedaPorLetraRequest)
+      BusquedaPorLetraRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use BusquedaPorLetraRequest.newBuilder() to construct.
+    private BusquedaPorLetraRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private BusquedaPorLetraRequest() {
+      letra_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private BusquedaPorLetraRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              letra_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorLetraRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorLetraRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.class, com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.Builder.class);
+    }
+
+    public static final int LETRA_FIELD_NUMBER = 1;
+    private volatile java.lang.Object letra_;
+    /**
+     * <code>string letra = 1;</code>
+     */
+    public java.lang.String getLetra() {
+      java.lang.Object ref = letra_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        letra_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string letra = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLetraBytes() {
+      java.lang.Object ref = letra_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        letra_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getLetraBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, letra_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getLetraBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, letra_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest)) {
+        return super.equals(obj);
+      }
+      com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest other = (com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest) obj;
+
+      boolean result = true;
+      result = result && getLetra()
+          .equals(other.getLetra());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LETRA_FIELD_NUMBER;
+      hash = (53 * hash) + getLetra().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code BusquedaPorLetraRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:BusquedaPorLetraRequest)
+        com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorLetraRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorLetraRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.class, com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.Builder.class);
+      }
+
+      // Construct using com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        letra_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.distribuidos.rcp.Farmacia.internal_static_BusquedaPorLetraRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest getDefaultInstanceForType() {
+        return com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest build() {
+        com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest buildPartial() {
+        com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest result = new com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest(this);
+        result.letra_ = letra_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest) {
+          return mergeFrom((com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest other) {
+        if (other == com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.getDefaultInstance()) return this;
+        if (!other.getLetra().isEmpty()) {
+          letra_ = other.letra_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object letra_ = "";
+      /**
+       * <code>string letra = 1;</code>
+       */
+      public java.lang.String getLetra() {
+        java.lang.Object ref = letra_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          letra_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string letra = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLetraBytes() {
+        java.lang.Object ref = letra_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          letra_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string letra = 1;</code>
+       */
+      public Builder setLetra(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        letra_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string letra = 1;</code>
+       */
+      public Builder clearLetra() {
+        
+        letra_ = getDefaultInstance().getLetra();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string letra = 1;</code>
+       */
+      public Builder setLetraBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        letra_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:BusquedaPorLetraRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:BusquedaPorLetraRequest)
+    private static final com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest();
+    }
+
+    public static com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<BusquedaPorLetraRequest>
+        PARSER = new com.google.protobuf.AbstractParser<BusquedaPorLetraRequest>() {
+      @java.lang.Override
+      public BusquedaPorLetraRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new BusquedaPorLetraRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<BusquedaPorLetraRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<BusquedaPorLetraRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface APIResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:APIResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -2360,6 +4147,21 @@ public final class Farmacia {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_BajaRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_AltaTipoRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_AltaTipoRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BusquedaPorPalabraRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BusquedaPorPalabraRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BusquedaPorLetraRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BusquedaPorLetraRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_APIResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -2376,11 +4178,19 @@ public final class Farmacia {
       "\n\016farmacia.proto\"V\n\013AltaRequest\022\n\n\002id\030\001 " +
       "\001(\t\022\016\n\006nombre\030\002 \001(\t\022\016\n\006codigo\030\003 \001(\t\022\r\n\005d" +
       "roga\030\004 \001(\t\022\014\n\004tipo\030\005 \001(\t\"\031\n\013BajaRequest\022" +
-      "\n\n\002id\030\001 \001(\t\"<\n\013APIResponse\022\027\n\017responseMe" +
-      "ssage\030\001 \001(\t\022\024\n\014responseCode\030\002 \001(\t2R\n\010far" +
-      "macia\022\"\n\004alta\022\014.AltaRequest\032\014.APIRespons" +
-      "e\022\"\n\004baja\022\014.BajaRequest\032\014.APIResponseB\026\n" +
-      "\024com.distribuidos.rcpb\006proto3"
+      "\n\n\002id\030\001 \001(\t\"-\n\017AltaTipoRequest\022\n\n\002id\030\001 \001" +
+      "(\t\022\016\n\006nombre\030\002 \001(\t\",\n\031BusquedaPorPalabra" +
+      "Request\022\017\n\007palabra\030\001 \001(\t\"(\n\027BusquedaPorL" +
+      "etraRequest\022\r\n\005letra\030\001 \001(\t\"<\n\013APIRespons" +
+      "e\022\027\n\017responseMessage\030\001 \001(\t\022\024\n\014responseCo" +
+      "de\030\002 \001(\t2\372\001\n\010farmacia\022\"\n\004alta\022\014.AltaRequ" +
+      "est\032\014.APIResponse\022\"\n\004baja\022\014.BajaRequest\032" +
+      "\014.APIResponse\022*\n\010altaTipo\022\020.AltaTipoRequ" +
+      "est\032\014.APIResponse\022>\n\022busquedaPorPalabra\022" +
+      "\032.BusquedaPorPalabraRequest\032\014.APIRespons" +
+      "e\022:\n\020busquedaPorLetra\022\030.BusquedaPorLetra" +
+      "Request\032\014.APIResponseB\026\n\024com.distribuido" +
+      "s.rcpb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2406,8 +4216,26 @@ public final class Farmacia {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BajaRequest_descriptor,
         new java.lang.String[] { "Id", });
-    internal_static_APIResponse_descriptor =
+    internal_static_AltaTipoRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_AltaTipoRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_AltaTipoRequest_descriptor,
+        new java.lang.String[] { "Id", "Nombre", });
+    internal_static_BusquedaPorPalabraRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_BusquedaPorPalabraRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BusquedaPorPalabraRequest_descriptor,
+        new java.lang.String[] { "Palabra", });
+    internal_static_BusquedaPorLetraRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_BusquedaPorLetraRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BusquedaPorLetraRequest_descriptor,
+        new java.lang.String[] { "Letra", });
+    internal_static_APIResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_APIResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_APIResponse_descriptor,

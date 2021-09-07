@@ -8,13 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Builder
 @Table(name = "medicamento")
 @Getter
 @Setter
@@ -35,4 +32,9 @@ public class MedicamentoModel {
     @JoinColumn(name = "FK_CATEGORIA", nullable = false, updatable = false)
 	private CategoriaModel categoria;
 
+	public MedicamentoModel(Integer id, String nombre, String codigo, String droga) {
+		this.nombre = nombre;
+		this.codigo = codigo;
+		this.droga = droga;
+	}
 }

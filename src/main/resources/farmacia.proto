@@ -5,6 +5,9 @@ option java_package = "com.distribuidos.rcp";
 service farmacia{
   rpc alta(AltaRequest) returns (APIResponse);
   rpc baja(BajaRequest) returns (APIResponse);
+  rpc altaTipo(AltaTipoRequest) returns (APIResponse);
+  rpc busquedaPorPalabra(BusquedaPorPalabraRequest) returns (APIResponse);
+  rpc busquedaPorLetra(BusquedaPorLetraRequest) returns (APIResponse);
 }
 
 message AltaRequest{
@@ -17,6 +20,19 @@ message AltaRequest{
 
 message BajaRequest{
   string id = 1;
+}
+
+message AltaTipoRequest{
+  string id = 1;
+  string nombre = 2;
+}
+
+message BusquedaPorPalabraRequest{
+  string palabra = 1;
+}
+
+message BusquedaPorLetraRequest{
+  string letra = 1;
 }
 
 message APIResponse{
