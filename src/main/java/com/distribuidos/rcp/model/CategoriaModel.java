@@ -19,8 +19,6 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "categoria")
-@NoArgsConstructor
-@AllArgsConstructor
 public class CategoriaModel {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,8 +27,44 @@ public class CategoriaModel {
 	@Getter @Setter private String nombre ;
 	@Column(columnDefinition = "boolean default false")
 	@Getter @Setter private boolean baja ;
-	
+
+	public CategoriaModel(long id, String nombre) {
+		this.id = id;
+		this.nombre = nombre;
+	}
+
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria")
 	@Getter @Setter private Set<MedicamentoModel> medicamentos = new HashSet<>();
 
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public boolean isBaja() {
+		return baja;
+	}
+
+	public void setBaja(boolean baja) {
+		this.baja = baja;
+	}
+
+	public Set<MedicamentoModel> getMedicamentos() {
+		return medicamentos;
+	}
+
+	public void setMedicamentos(Set<MedicamentoModel> medicamentos) {
+		this.medicamentos = medicamentos;
+	}
 }
