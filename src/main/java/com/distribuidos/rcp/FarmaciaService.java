@@ -1,6 +1,7 @@
 package com.distribuidos.rcp;
 import com.distribuidos.rcp.repositories.CategoriaRepository;
 import com.distribuidos.rcp.repositories.MedicamentoRepository;
+import com.distribuidos.rcp.model.MedicamentoModel;
 import io.grpc.stub.StreamObserver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
