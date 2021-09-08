@@ -6,8 +6,11 @@ service farmacia{
   rpc alta(AltaRequest) returns (APIResponse);
   rpc baja(BajaRequest) returns (APIResponse);
   rpc altaTipo(AltaTipoRequest) returns (APIResponse);
-  rpc busquedaPorPalabra(BusquedaPorPalabraRequest) returns (APIResponse);
-  rpc busquedaPorLetra(BusquedaPorLetraRequest) returns (APIResponse);
+  rpc bajaTipo(BajaTipoRequest) returns (APIResponse);
+  rpc busquedaPorPalabra(BusquedaRequest) returns (APIResponse);
+  rpc listadoMedicamentos(ListadoMedicamentos) returns (APIResponse);
+  rpc listadoCodigos(ListadoCodigos) returns (APIResponse);
+  rpc digitoVerificador(DigitoVerificadorRequest) returns (APIResponse);
 }
 
 message AltaRequest{
@@ -27,12 +30,24 @@ message AltaTipoRequest{
   string nombre = 2;
 }
 
-message BusquedaPorPalabraRequest{
-  string palabra = 1;
+message BajaTipoRequest{
+  string id = 1;
 }
 
-message BusquedaPorLetraRequest{
-  string letra = 1;
+message BusquedaRequest{
+  string buscar = 1;
+  string filtro = 2;
+  string columna = 3;
+}
+
+message ListadoMedicamentos{
+}
+
+message ListadoCodigos{
+}
+
+message DigitoVerificadorRequest{
+  string digito = 1;
 }
 
 message APIResponse{
