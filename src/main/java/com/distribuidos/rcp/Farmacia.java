@@ -2362,6 +2362,16 @@ public final class Farmacia {
      */
     com.google.protobuf.ByteString
         getIdBytes();
+
+    /**
+     * <code>string baja = 2;</code>
+     */
+    java.lang.String getBaja();
+    /**
+     * <code>string baja = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getBajaBytes();
   }
   /**
    * Protobuf type {@code BajaTipoRequest}
@@ -2377,6 +2387,7 @@ public final class Farmacia {
     }
     private BajaTipoRequest() {
       id_ = "";
+      baja_ = "";
     }
 
     @java.lang.Override
@@ -2407,6 +2418,12 @@ public final class Farmacia {
               java.lang.String s = input.readStringRequireUtf8();
 
               id_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              baja_ = s;
               break;
             }
             default: {
@@ -2475,6 +2492,40 @@ public final class Farmacia {
       }
     }
 
+    public static final int BAJA_FIELD_NUMBER = 2;
+    private volatile java.lang.Object baja_;
+    /**
+     * <code>string baja = 2;</code>
+     */
+    public java.lang.String getBaja() {
+      java.lang.Object ref = baja_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        baja_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string baja = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getBajaBytes() {
+      java.lang.Object ref = baja_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        baja_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -2492,6 +2543,9 @@ public final class Farmacia {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
+      if (!getBajaBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, baja_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -2503,6 +2557,9 @@ public final class Farmacia {
       size = 0;
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
+      if (!getBajaBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, baja_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2522,6 +2579,8 @@ public final class Farmacia {
       boolean result = true;
       result = result && getId()
           .equals(other.getId());
+      result = result && getBaja()
+          .equals(other.getBaja());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2535,6 +2594,8 @@ public final class Farmacia {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + BAJA_FIELD_NUMBER;
+      hash = (53 * hash) + getBaja().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2670,6 +2731,8 @@ public final class Farmacia {
         super.clear();
         id_ = "";
 
+        baja_ = "";
+
         return this;
       }
 
@@ -2697,6 +2760,7 @@ public final class Farmacia {
       public com.distribuidos.rcp.Farmacia.BajaTipoRequest buildPartial() {
         com.distribuidos.rcp.Farmacia.BajaTipoRequest result = new com.distribuidos.rcp.Farmacia.BajaTipoRequest(this);
         result.id_ = id_;
+        result.baja_ = baja_;
         onBuilt();
         return result;
       }
@@ -2747,6 +2811,10 @@ public final class Farmacia {
         if (other == com.distribuidos.rcp.Farmacia.BajaTipoRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getBaja().isEmpty()) {
+          baja_ = other.baja_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -2843,6 +2911,75 @@ public final class Farmacia {
   checkByteStringIsUtf8(value);
         
         id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object baja_ = "";
+      /**
+       * <code>string baja = 2;</code>
+       */
+      public java.lang.String getBaja() {
+        java.lang.Object ref = baja_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          baja_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string baja = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getBajaBytes() {
+        java.lang.Object ref = baja_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          baja_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string baja = 2;</code>
+       */
+      public Builder setBaja(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        baja_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string baja = 2;</code>
+       */
+      public Builder clearBaja() {
+        
+        baja_ = getDefaultInstance().getBaja();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string baja = 2;</code>
+       */
+      public Builder setBajaBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        baja_ = value;
         onChanged();
         return this;
       }
@@ -5842,24 +5979,24 @@ public final class Farmacia {
       "\001(\t\022\016\n\006nombre\030\002 \001(\t\022\016\n\006codigo\030\003 \001(\t\022\r\n\005d" +
       "roga\030\004 \001(\t\022\014\n\004tipo\030\005 \001(\t\"\031\n\013BajaRequest\022" +
       "\n\n\002id\030\001 \001(\t\"-\n\017AltaTipoRequest\022\n\n\002id\030\001 \001" +
-      "(\t\022\016\n\006nombre\030\002 \001(\t\"\035\n\017BajaTipoRequest\022\n\n" +
-      "\002id\030\001 \001(\t\"B\n\017BusquedaRequest\022\016\n\006buscar\030\001" +
-      " \001(\t\022\016\n\006filtro\030\002 \001(\t\022\017\n\007columna\030\003 \001(\t\"\025\n" +
-      "\023ListadoMedicamentos\"\020\n\016ListadoCodigos\"*" +
-      "\n\030DigitoVerificadorRequest\022\016\n\006digito\030\001 \001" +
-      "(\t\"<\n\013APIResponse\022\027\n\017responseMessage\030\001 \001" +
-      "(\t\022\024\n\014responseCode\030\002 \001(\t2\212\003\n\010farmacia\022\"\n" +
-      "\004alta\022\014.AltaRequest\032\014.APIResponse\022\"\n\004baj" +
-      "a\022\014.BajaRequest\032\014.APIResponse\022*\n\010altaTip" +
-      "o\022\020.AltaTipoRequest\032\014.APIResponse\022*\n\010baj" +
-      "aTipo\022\020.BajaTipoRequest\032\014.APIResponse\0224\n" +
-      "\022busquedaPorPalabra\022\020.BusquedaRequest\032\014." +
-      "APIResponse\0229\n\023listadoMedicamentos\022\024.Lis" +
-      "tadoMedicamentos\032\014.APIResponse\022/\n\016listad" +
-      "oCodigos\022\017.ListadoCodigos\032\014.APIResponse\022" +
-      "<\n\021digitoVerificador\022\031.DigitoVerificador" +
-      "Request\032\014.APIResponseB\026\n\024com.distribuido" +
-      "s.rcpb\006proto3"
+      "(\t\022\016\n\006nombre\030\002 \001(\t\"+\n\017BajaTipoRequest\022\n\n" +
+      "\002id\030\001 \001(\t\022\014\n\004baja\030\002 \001(\t\"B\n\017BusquedaReque" +
+      "st\022\016\n\006buscar\030\001 \001(\t\022\016\n\006filtro\030\002 \001(\t\022\017\n\007co" +
+      "lumna\030\003 \001(\t\"\025\n\023ListadoMedicamentos\"\020\n\016Li" +
+      "stadoCodigos\"*\n\030DigitoVerificadorRequest" +
+      "\022\016\n\006digito\030\001 \001(\t\"<\n\013APIResponse\022\027\n\017respo" +
+      "nseMessage\030\001 \001(\t\022\024\n\014responseCode\030\002 \001(\t2\212" +
+      "\003\n\010farmacia\022\"\n\004alta\022\014.AltaRequest\032\014.APIR" +
+      "esponse\022\"\n\004baja\022\014.BajaRequest\032\014.APIRespo" +
+      "nse\022*\n\010altaTipo\022\020.AltaTipoRequest\032\014.APIR" +
+      "esponse\022*\n\010bajaTipo\022\020.BajaTipoRequest\032\014." +
+      "APIResponse\0224\n\022busquedaPorPalabra\022\020.Busq" +
+      "uedaRequest\032\014.APIResponse\0229\n\023listadoMedi" +
+      "camentos\022\024.ListadoMedicamentos\032\014.APIResp" +
+      "onse\022/\n\016listadoCodigos\022\017.ListadoCodigos\032" +
+      "\014.APIResponse\022<\n\021digitoVerificador\022\031.Dig" +
+      "itoVerificadorRequest\032\014.APIResponseB\026\n\024c" +
+      "om.distribuidos.rcpb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5896,7 +6033,7 @@ public final class Farmacia {
     internal_static_BajaTipoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BajaTipoRequest_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "Baja", });
     internal_static_BusquedaRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_BusquedaRequest_fieldAccessorTable = new
