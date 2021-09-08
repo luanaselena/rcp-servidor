@@ -71,6 +71,8 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     @Override
     public void bajaTipo(Farmacia.BajaTipoRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
         String id = request.getId();
+        String baja = request.getBaja();
+
 
         //se efectua la baja logica en la base
 
@@ -98,33 +100,48 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     @Override
     public void digitoVerificador(Farmacia.DigitoVerificadorRequest request, StreamObserver<Farmacia.APIResponse> responseObserver){
         String digito = request.getDigito();
-
+        
         String[] partes = digito.split("-");
         String codAlfabetico = partes[0];
         String codNumerico = partes[1];
         String digVerificador = partes[2];
 
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-
-        if(codAlfabetico == "P"){
+        
+        
+        if(codAlfabetico.substring(0, 1).equals("P")){
+        	System.out.print("P");
             if(verificar(codNumerico, digVerificador)){
                 response.setResponseCode("1").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = TRUE");
             }
             else{
-                response.setResponseCode("3").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = FALSE");
+                response.setResponseCode("2").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = FALSE");
             }
-        }
-        if(codAlfabetico == "W"){
+        } else if(codAlfabetico.substring(0, 1).equals("W")){
+        	System.out.print("W");
             if(verificar(codNumerico, digVerificador)){
+            	System.out.print("1");
                 response.setResponseCode("1").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = TRUE");
             }
             else{
-                response.setResponseCode("3").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = FALSE");
+            	System.out.print("2");
+                response.setResponseCode("2").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = FALSE");
+            }
+        } else {
+        	
+            if(verificar(codNumerico, digVerificador)){
+                response.setResponseCode("3").setResponseMessage("esPrioritario(codigo) = FALSE | verificar(codigo) = TRUE");
+            }
+            else{
+                response.setResponseCode("4").setResponseMessage("esPrioritario(codigo) = FALSE | verificar(codigo) = FALSE");
             }
         }
+       
 
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
+        
+        System.out.print(response);
     }
 
     private boolean verificar(String codNumerico, String digVerificador){
@@ -151,7 +168,8 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     @Override
     public void listadoMedicamentos(Farmacia.ListadoMedicamentos request, StreamObserver<Farmacia.APIResponse> responseObserver){
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        response.setResponseCode("1").setResponseMessage("[\"Actron Ibuprofeno Capsulas blandas\",\"Actron Ibuprofeno Comprimidos\",\"Rivotril Clonazepam Comprimidos\",\"Ibuevanol Ibuprofeno Capsulas blandas\",\"Laxamin Bisacodilo Comprimidos\",\"Ketorolac Sinalgico Capsulas blandas\",\"Tafirol Paracetamol Capsulas blandas\",\"Omeprasec Omeprazol Capsulas blandas\",\"Desinflamasol Ibuprofeno Crema\"]");
+        //response.setResponseCode("1").setResponseMessage("[\"Actron Ibuprofeno Capsulas blandas\",\"Actron Ibuprofeno Comprimidos\",\"Rivotril Clonazepam Comprimidos\",\"Ibuevanol Ibuprofeno Capsulas blandas\",\"Laxamin Bisacodilo Comprimidos\",\"Ketorolac Sinalgico Capsulas blandas\",\"Tafirol Paracetamol Capsulas blandas\",\"Omeprasec Omeprazol Capsulas blandas\",\"Desinflamasol Ibuprofeno Crema\"]");
+        response.setResponseCode("1").setResponseMessage("[{'codigo':'AIC-23142-4', 'nombre':'Actron', 'droga':'Ibuprofeno', 'tipo': 'Capsulas blandas'}, {'codigo':'AIC-42182-8', 'nombre':'Actron', 'droga':'Ibuprofeno', 'tipo': 'Comprimidos'}, {'codigo':'RCC-74512-1', 'nombre':'Rivotril', 'droga':'Clonazepam', 'tipo': 'Comprimidos'}, {'codigo':'IIC-58403-2', 'nombre':'Ibuevanol', 'droga':'Ibuprofeno', 'tipo': 'Capsulas blandas'}, {'codigo':'LBC-49320-9', 'nombre':'Laxamin', 'droga':'Bisacodilo', 'tipo': 'Comprimidos'}, {'codigo':'KSC-92325-3', 'nombre':'Ketorolac', 'droga':'Sinalgico', 'tipo': 'Capsulas blandas'}, {'codigo':'TPC-32473-1', 'nombre':'Tafirol', 'droga':'Paracetamol', 'tipo': 'Capsulas blandas'}, {'codigo':'OOC-08123-5', 'nombre':'Omeprasec', 'droga':'Omeprazol', 'tipo': 'Capsulas blandas'}, {'codigo':'DIC-51325-7', 'nombre':'Desinflamasol', 'droga':'Ibuprofeno', 'tipo': 'Crema'}]");
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }

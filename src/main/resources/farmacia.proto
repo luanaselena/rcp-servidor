@@ -32,6 +32,7 @@ message AltaTipoRequest{
 
 message BajaTipoRequest{
   string id = 1;
+  string baja = 2;
 }
 
 message BusquedaRequest{
