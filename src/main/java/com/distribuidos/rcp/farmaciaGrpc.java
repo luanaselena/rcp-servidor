@@ -123,28 +123,60 @@ public final class farmaciaGrpc {
      return getAltaTipoMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest,
+  private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BajaTipoRequest,
+      com.distribuidos.rcp.Farmacia.APIResponse> getBajaTipoMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "bajaTipo",
+      requestType = com.distribuidos.rcp.Farmacia.BajaTipoRequest.class,
+      responseType = com.distribuidos.rcp.Farmacia.APIResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BajaTipoRequest,
+      com.distribuidos.rcp.Farmacia.APIResponse> getBajaTipoMethod() {
+    io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BajaTipoRequest, com.distribuidos.rcp.Farmacia.APIResponse> getBajaTipoMethod;
+    if ((getBajaTipoMethod = farmaciaGrpc.getBajaTipoMethod) == null) {
+      synchronized (farmaciaGrpc.class) {
+        if ((getBajaTipoMethod = farmaciaGrpc.getBajaTipoMethod) == null) {
+          farmaciaGrpc.getBajaTipoMethod = getBajaTipoMethod = 
+              io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.BajaTipoRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "farmacia", "bajaTipo"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.distribuidos.rcp.Farmacia.BajaTipoRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("bajaTipo"))
+                  .build();
+          }
+        }
+     }
+     return getBajaTipoMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaRequest,
       com.distribuidos.rcp.Farmacia.APIResponse> getBusquedaPorPalabraMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "busquedaPorPalabra",
-      requestType = com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.class,
+      requestType = com.distribuidos.rcp.Farmacia.BusquedaRequest.class,
       responseType = com.distribuidos.rcp.Farmacia.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest,
+  public static io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaRequest,
       com.distribuidos.rcp.Farmacia.APIResponse> getBusquedaPorPalabraMethod() {
-    io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest, com.distribuidos.rcp.Farmacia.APIResponse> getBusquedaPorPalabraMethod;
+    io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaRequest, com.distribuidos.rcp.Farmacia.APIResponse> getBusquedaPorPalabraMethod;
     if ((getBusquedaPorPalabraMethod = farmaciaGrpc.getBusquedaPorPalabraMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getBusquedaPorPalabraMethod = farmaciaGrpc.getBusquedaPorPalabraMethod) == null) {
           farmaciaGrpc.getBusquedaPorPalabraMethod = getBusquedaPorPalabraMethod = 
-              io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.BusquedaRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "farmacia", "busquedaPorPalabra"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest.getDefaultInstance()))
+                  com.distribuidos.rcp.Farmacia.BusquedaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
                   .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("busquedaPorPalabra"))
@@ -155,36 +187,100 @@ public final class farmaciaGrpc {
      return getBusquedaPorPalabraMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest,
-      com.distribuidos.rcp.Farmacia.APIResponse> getBusquedaPorLetraMethod;
+  private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.ListadoMedicamentos,
+      com.distribuidos.rcp.Farmacia.APIResponse> getListadoMedicamentosMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "busquedaPorLetra",
-      requestType = com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.class,
+      fullMethodName = SERVICE_NAME + '/' + "listadoMedicamentos",
+      requestType = com.distribuidos.rcp.Farmacia.ListadoMedicamentos.class,
       responseType = com.distribuidos.rcp.Farmacia.APIResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest,
-      com.distribuidos.rcp.Farmacia.APIResponse> getBusquedaPorLetraMethod() {
-    io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest, com.distribuidos.rcp.Farmacia.APIResponse> getBusquedaPorLetraMethod;
-    if ((getBusquedaPorLetraMethod = farmaciaGrpc.getBusquedaPorLetraMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.ListadoMedicamentos,
+      com.distribuidos.rcp.Farmacia.APIResponse> getListadoMedicamentosMethod() {
+    io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.ListadoMedicamentos, com.distribuidos.rcp.Farmacia.APIResponse> getListadoMedicamentosMethod;
+    if ((getListadoMedicamentosMethod = farmaciaGrpc.getListadoMedicamentosMethod) == null) {
       synchronized (farmaciaGrpc.class) {
-        if ((getBusquedaPorLetraMethod = farmaciaGrpc.getBusquedaPorLetraMethod) == null) {
-          farmaciaGrpc.getBusquedaPorLetraMethod = getBusquedaPorLetraMethod = 
-              io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
+        if ((getListadoMedicamentosMethod = farmaciaGrpc.getListadoMedicamentosMethod) == null) {
+          farmaciaGrpc.getListadoMedicamentosMethod = getListadoMedicamentosMethod = 
+              io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.ListadoMedicamentos, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "farmacia", "busquedaPorLetra"))
+                  "farmacia", "listadoMedicamentos"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest.getDefaultInstance()))
+                  com.distribuidos.rcp.Farmacia.ListadoMedicamentos.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("busquedaPorLetra"))
+                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("listadoMedicamentos"))
                   .build();
           }
         }
      }
-     return getBusquedaPorLetraMethod;
+     return getListadoMedicamentosMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.ListadoCodigos,
+      com.distribuidos.rcp.Farmacia.APIResponse> getListadoCodigosMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "listadoCodigos",
+      requestType = com.distribuidos.rcp.Farmacia.ListadoCodigos.class,
+      responseType = com.distribuidos.rcp.Farmacia.APIResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.ListadoCodigos,
+      com.distribuidos.rcp.Farmacia.APIResponse> getListadoCodigosMethod() {
+    io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.ListadoCodigos, com.distribuidos.rcp.Farmacia.APIResponse> getListadoCodigosMethod;
+    if ((getListadoCodigosMethod = farmaciaGrpc.getListadoCodigosMethod) == null) {
+      synchronized (farmaciaGrpc.class) {
+        if ((getListadoCodigosMethod = farmaciaGrpc.getListadoCodigosMethod) == null) {
+          farmaciaGrpc.getListadoCodigosMethod = getListadoCodigosMethod = 
+              io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.ListadoCodigos, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "farmacia", "listadoCodigos"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.distribuidos.rcp.Farmacia.ListadoCodigos.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("listadoCodigos"))
+                  .build();
+          }
+        }
+     }
+     return getListadoCodigosMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest,
+      com.distribuidos.rcp.Farmacia.APIResponse> getDigitoVerificadorMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "digitoVerificador",
+      requestType = com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest.class,
+      responseType = com.distribuidos.rcp.Farmacia.APIResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest,
+      com.distribuidos.rcp.Farmacia.APIResponse> getDigitoVerificadorMethod() {
+    io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest, com.distribuidos.rcp.Farmacia.APIResponse> getDigitoVerificadorMethod;
+    if ((getDigitoVerificadorMethod = farmaciaGrpc.getDigitoVerificadorMethod) == null) {
+      synchronized (farmaciaGrpc.class) {
+        if ((getDigitoVerificadorMethod = farmaciaGrpc.getDigitoVerificadorMethod) == null) {
+          farmaciaGrpc.getDigitoVerificadorMethod = getDigitoVerificadorMethod = 
+              io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "farmacia", "digitoVerificador"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
+                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("digitoVerificador"))
+                  .build();
+          }
+        }
+     }
+     return getDigitoVerificadorMethod;
   }
 
   /**
@@ -237,16 +333,37 @@ public final class farmaciaGrpc {
 
     /**
      */
-    public void busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest request,
+    public void bajaTipo(com.distribuidos.rcp.Farmacia.BajaTipoRequest request,
+        io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getBajaTipoMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getBusquedaPorPalabraMethod(), responseObserver);
     }
 
     /**
      */
-    public void busquedaPorLetra(com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest request,
+    public void listadoMedicamentos(com.distribuidos.rcp.Farmacia.ListadoMedicamentos request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getBusquedaPorLetraMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListadoMedicamentosMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void listadoCodigos(com.distribuidos.rcp.Farmacia.ListadoCodigos request,
+        io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getListadoCodigosMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void digitoVerificador(com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest request,
+        io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getDigitoVerificadorMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -273,19 +390,40 @@ public final class farmaciaGrpc {
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_ALTA_TIPO)))
           .addMethod(
+            getBajaTipoMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.distribuidos.rcp.Farmacia.BajaTipoRequest,
+                com.distribuidos.rcp.Farmacia.APIResponse>(
+                  this, METHODID_BAJA_TIPO)))
+          .addMethod(
             getBusquedaPorPalabraMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest,
+                com.distribuidos.rcp.Farmacia.BusquedaRequest,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_BUSQUEDA_POR_PALABRA)))
           .addMethod(
-            getBusquedaPorLetraMethod(),
+            getListadoMedicamentosMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest,
+                com.distribuidos.rcp.Farmacia.ListadoMedicamentos,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
-                  this, METHODID_BUSQUEDA_POR_LETRA)))
+                  this, METHODID_LISTADO_MEDICAMENTOS)))
+          .addMethod(
+            getListadoCodigosMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.distribuidos.rcp.Farmacia.ListadoCodigos,
+                com.distribuidos.rcp.Farmacia.APIResponse>(
+                  this, METHODID_LISTADO_CODIGOS)))
+          .addMethod(
+            getDigitoVerificadorMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest,
+                com.distribuidos.rcp.Farmacia.APIResponse>(
+                  this, METHODID_DIGITO_VERIFICADOR)))
           .build();
     }
   }
@@ -334,7 +472,15 @@ public final class farmaciaGrpc {
 
     /**
      */
-    public void busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest request,
+    public void bajaTipo(com.distribuidos.rcp.Farmacia.BajaTipoRequest request,
+        io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getBajaTipoMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getBusquedaPorPalabraMethod(), getCallOptions()), request, responseObserver);
@@ -342,10 +488,26 @@ public final class farmaciaGrpc {
 
     /**
      */
-    public void busquedaPorLetra(com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest request,
+    public void listadoMedicamentos(com.distribuidos.rcp.Farmacia.ListadoMedicamentos request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getBusquedaPorLetraMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getListadoMedicamentosMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void listadoCodigos(com.distribuidos.rcp.Farmacia.ListadoCodigos request,
+        io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getListadoCodigosMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void digitoVerificador(com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest request,
+        io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getDigitoVerificadorMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -390,16 +552,37 @@ public final class farmaciaGrpc {
 
     /**
      */
-    public com.distribuidos.rcp.Farmacia.APIResponse busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest request) {
+    public com.distribuidos.rcp.Farmacia.APIResponse bajaTipo(com.distribuidos.rcp.Farmacia.BajaTipoRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getBajaTipoMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.distribuidos.rcp.Farmacia.APIResponse busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaRequest request) {
       return blockingUnaryCall(
           getChannel(), getBusquedaPorPalabraMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.distribuidos.rcp.Farmacia.APIResponse busquedaPorLetra(com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest request) {
+    public com.distribuidos.rcp.Farmacia.APIResponse listadoMedicamentos(com.distribuidos.rcp.Farmacia.ListadoMedicamentos request) {
       return blockingUnaryCall(
-          getChannel(), getBusquedaPorLetraMethod(), getCallOptions(), request);
+          getChannel(), getListadoMedicamentosMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.distribuidos.rcp.Farmacia.APIResponse listadoCodigos(com.distribuidos.rcp.Farmacia.ListadoCodigos request) {
+      return blockingUnaryCall(
+          getChannel(), getListadoCodigosMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.distribuidos.rcp.Farmacia.APIResponse digitoVerificador(com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getDigitoVerificadorMethod(), getCallOptions(), request);
     }
   }
 
@@ -447,26 +630,53 @@ public final class farmaciaGrpc {
 
     /**
      */
+    public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> bajaTipo(
+        com.distribuidos.rcp.Farmacia.BajaTipoRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getBajaTipoMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> busquedaPorPalabra(
-        com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest request) {
+        com.distribuidos.rcp.Farmacia.BusquedaRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getBusquedaPorPalabraMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> busquedaPorLetra(
-        com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> listadoMedicamentos(
+        com.distribuidos.rcp.Farmacia.ListadoMedicamentos request) {
       return futureUnaryCall(
-          getChannel().newCall(getBusquedaPorLetraMethod(), getCallOptions()), request);
+          getChannel().newCall(getListadoMedicamentosMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> listadoCodigos(
+        com.distribuidos.rcp.Farmacia.ListadoCodigos request) {
+      return futureUnaryCall(
+          getChannel().newCall(getListadoCodigosMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> digitoVerificador(
+        com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getDigitoVerificadorMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_ALTA = 0;
   private static final int METHODID_BAJA = 1;
   private static final int METHODID_ALTA_TIPO = 2;
-  private static final int METHODID_BUSQUEDA_POR_PALABRA = 3;
-  private static final int METHODID_BUSQUEDA_POR_LETRA = 4;
+  private static final int METHODID_BAJA_TIPO = 3;
+  private static final int METHODID_BUSQUEDA_POR_PALABRA = 4;
+  private static final int METHODID_LISTADO_MEDICAMENTOS = 5;
+  private static final int METHODID_LISTADO_CODIGOS = 6;
+  private static final int METHODID_DIGITO_VERIFICADOR = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -497,12 +707,24 @@ public final class farmaciaGrpc {
           serviceImpl.altaTipo((com.distribuidos.rcp.Farmacia.AltaTipoRequest) request,
               (io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse>) responseObserver);
           break;
-        case METHODID_BUSQUEDA_POR_PALABRA:
-          serviceImpl.busquedaPorPalabra((com.distribuidos.rcp.Farmacia.BusquedaPorPalabraRequest) request,
+        case METHODID_BAJA_TIPO:
+          serviceImpl.bajaTipo((com.distribuidos.rcp.Farmacia.BajaTipoRequest) request,
               (io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse>) responseObserver);
           break;
-        case METHODID_BUSQUEDA_POR_LETRA:
-          serviceImpl.busquedaPorLetra((com.distribuidos.rcp.Farmacia.BusquedaPorLetraRequest) request,
+        case METHODID_BUSQUEDA_POR_PALABRA:
+          serviceImpl.busquedaPorPalabra((com.distribuidos.rcp.Farmacia.BusquedaRequest) request,
+              (io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse>) responseObserver);
+          break;
+        case METHODID_LISTADO_MEDICAMENTOS:
+          serviceImpl.listadoMedicamentos((com.distribuidos.rcp.Farmacia.ListadoMedicamentos) request,
+              (io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse>) responseObserver);
+          break;
+        case METHODID_LISTADO_CODIGOS:
+          serviceImpl.listadoCodigos((com.distribuidos.rcp.Farmacia.ListadoCodigos) request,
+              (io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse>) responseObserver);
+          break;
+        case METHODID_DIGITO_VERIFICADOR:
+          serviceImpl.digitoVerificador((com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest) request,
               (io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse>) responseObserver);
           break;
         default:
@@ -569,8 +791,11 @@ public final class farmaciaGrpc {
               .addMethod(getAltaMethod())
               .addMethod(getBajaMethod())
               .addMethod(getAltaTipoMethod())
+              .addMethod(getBajaTipoMethod())
               .addMethod(getBusquedaPorPalabraMethod())
-              .addMethod(getBusquedaPorLetraMethod())
+              .addMethod(getListadoMedicamentosMethod())
+              .addMethod(getListadoCodigosMethod())
+              .addMethod(getDigitoVerificadorMethod())
               .build();
         }
       }

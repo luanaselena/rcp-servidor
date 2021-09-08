@@ -23,10 +23,10 @@ public class CategoriaModel {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
-	@Getter @Setter private long id ;
-	@Getter @Setter private String nombre ;
+	private long id ;
+	private String nombre ;
 	@Column(columnDefinition = "boolean default false")
-	@Getter @Setter private boolean baja ;
+	private boolean baja ;
 
 	public CategoriaModel(long id, String nombre) {
 		this.id = id;
@@ -34,7 +34,7 @@ public class CategoriaModel {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria")
-	@Getter @Setter private Set<MedicamentoModel> medicamentos = new HashSet<>();
+	private Set<MedicamentoModel> medicamentos = new HashSet<>();
 
 	public long getId() {
 		return id;

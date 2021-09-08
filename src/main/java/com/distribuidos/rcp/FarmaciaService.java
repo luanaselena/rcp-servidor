@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.stream.IntStream;
+
 @Service
 public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
 
@@ -67,25 +69,97 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     }
 
     @Override
-    public void busquedaPorPalabra(Farmacia.BusquedaPorPalabraRequest request, StreamObserver<Farmacia.APIResponse> responseObserver){
-        String palabra = request.getPalabra();
+    public void bajaTipo(Farmacia.BajaTipoRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
+        String id = request.getId();
 
-        //se filtraria por el nombre de tipo
+        //se efectua la baja logica en la base
 
+        //se envia la respuesta al servidor
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        response.setResponseCode("2").setResponseMessage("Lista de medicamentos con palabra AEROSOL");
+        response.setResponseCode("1").setResponseMessage("Se efectuo la baja del tipo de medicamento");
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }
 
     @Override
-    public void busquedaPorLetra(Farmacia.BusquedaPorLetraRequest request, StreamObserver<Farmacia.APIResponse> responseObserver){
-        String letra = request.getLetra();
+    public void busquedaPorPalabra(Farmacia.BusquedaRequest request, StreamObserver<Farmacia.APIResponse> responseObserver){
+        String buscar = request.getBuscar();
+        String filtro = request.getFiltro();
+        String columna = request.getColumna();
 
-        //se filtrarian los medicamentos por nombres empezados por la letra correspondiente
+        //se aplican los 3 parametros para la busqueda
 
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        response.setResponseCode("2").setResponseMessage("Lista de medicamentos cuyo nombre comience con letra A");
+        response.setResponseCode("2").setResponseMessage("Lista de medicamentos con PALABRA o LETRA");
+        responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void digitoVerificador(Farmacia.DigitoVerificadorRequest request, StreamObserver<Farmacia.APIResponse> responseObserver){
+        String digito = request.getDigito();
+
+        String[] partes = digito.split("-");
+        String codAlfabetico = partes[0];
+        String codNumerico = partes[1];
+        String digVerificador = partes[2];
+
+        Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
+
+        if(codAlfabetico == "P"){
+            if(verificar(codNumerico, digVerificador)){
+                response.setResponseCode("1").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = TRUE");
+            }
+            else{
+                response.setResponseCode("3").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = FALSE");
+            }
+        }
+        if(codAlfabetico == "W"){
+            if(verificar(codNumerico, digVerificador)){
+                response.setResponseCode("1").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = TRUE");
+            }
+            else{
+                response.setResponseCode("3").setResponseMessage("esPrioritario(codigo) = TRUE | verificar(codigo) = FALSE");
+            }
+        }
+
+        responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
+    }
+
+    private boolean verificar(String codNumerico, String digVerificador){
+
+        // convirtiendo el codNumerico en un array de numeros
+
+        int[] num = new int[codNumerico.length()];
+
+        for (int i = 0; i < codNumerico.length(); i++){
+            num[i] = codNumerico.charAt(i) - '0';
+        }
+
+        //se suman todos los numeros del codigo numerico
+        int sum = IntStream.of(num).sum();
+
+        if(sum == Integer.parseInt(digVerificador)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public void listadoMedicamentos(Farmacia.ListadoMedicamentos request, StreamObserver<Farmacia.APIResponse> responseObserver){
+        Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
+        response.setResponseCode("1").setResponseMessage("[\"Actron Ibuprofeno Capsulas blandas\",\"Actron Ibuprofeno Comprimidos\",\"Rivotril Clonazepam Comprimidos\",\"Ibuevanol Ibuprofeno Capsulas blandas\",\"Laxamin Bisacodilo Comprimidos\",\"Ketorolac Sinalgico Capsulas blandas\",\"Tafirol Paracetamol Capsulas blandas\",\"Omeprasec Omeprazol Capsulas blandas\",\"Desinflamasol Ibuprofeno Crema\"]");
+        responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void listadoCodigos(Farmacia.ListadoCodigos request, StreamObserver<Farmacia.APIResponse> responseObserver){
+        Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
+        response.setResponseCode("1").setResponseMessage("[\"AIC-23142-4\",\"AIC-42182-8\",\"RCC-74512-1\",\"IIC-58403-2\",\"LBC-49320-9\",\"KSC-92325-3\",\"TPC-32473-1\",\"OOC-08123-5\",\"DIC-51325-7\"]");
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }
