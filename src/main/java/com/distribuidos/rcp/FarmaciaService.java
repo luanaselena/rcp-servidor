@@ -190,14 +190,11 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     @Override
     public void listadoMedicamentos(Farmacia.ListadoMedicamentos request, StreamObserver<Farmacia.APIResponse> responseObserver){
 
-        List<String> nombresMedicamento = new ArrayList<>();
-        for (MedicamentoModel medicamentoModel : medicamentoRepository.findAll()){
-            nombresMedicamento.add(medicamentoModel.getNombre());
-        }
+        List<MedicamentoModel> medicamentos = medicamentoRepository.findAll();
         
         String medicamentosJson = "";
         try {
-			medicamentosJson = objectMapper.writeValueAsString(nombresMedicamento);
+			medicamentosJson = objectMapper.writeValueAsString(medicamentos);
 		} catch (JsonProcessingException e) {
 			throw new RuntimeException("Error serializando medicamentos!");
 		}
