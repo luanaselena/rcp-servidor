@@ -12,10 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "categoria")
@@ -38,6 +35,7 @@ public class CategoriaModel {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria")
+	@JsonIgnore
 	private Set<MedicamentoModel> medicamentos = new HashSet<>();
 
 	public long getId() {
