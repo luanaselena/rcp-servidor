@@ -1,12 +1,18 @@
 package com.distribuidos.rcp;
+import com.distribuidos.rcp.model.CategoriaModel;
 import com.distribuidos.rcp.repositories.CategoriaRepository;
 import com.distribuidos.rcp.repositories.MedicamentoRepository;
 import com.distribuidos.rcp.model.MedicamentoModel;
+import com.google.protobuf.UnknownFieldSet;
 import io.grpc.stub.StreamObserver;
+import org.json.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 @Service
@@ -29,7 +35,7 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
         String tipo = request.getTipo();
 
         //se guarda el dato que se recibe en la base de datos
-        //MedicamentoModel medicamentoModel = medicamentoRepository.save(new MedicamentoModel(Integer.valueOf(id), nombre,codigo,droga));
+        MedicamentoModel medicamentoModel = medicamentoRepository.save(new MedicamentoModel(nombre,codigo,droga));
 
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
         response.setResponseCode("0").setResponseMessage("Medicamento dado de alta");
@@ -43,8 +49,8 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     public void baja(Farmacia.BajaRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
         String id = request.getId();
 
-        //se busca el medicamento con ese id y se da de baja
-        //medicamentoRepository.delete();
+        MedicamentoModel medicamentoModel = medicamentoRepository.findById(Integer.valueOf(id));
+        medicamentoModel.setBaja(true);
 
         //se envia la respuesta al servidor
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
@@ -59,7 +65,7 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
         String nombre = request.getNombre();
 
         //se da de alta el tipo en la base de datos
-        //CategoriaModel categoriaModel = categoriaRepository.save(new CategoriaModel(Integer.valueOf(id),nombre));
+        CategoriaModel categoriaModel = categoriaRepository.save(new CategoriaModel(Integer.valueOf(id),nombre));
 
         //se envia la respuesta al servidor
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
@@ -74,7 +80,8 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
         String baja = request.getBaja();
 
 
-        //se efectua la baja logica en la base
+        CategoriaModel categoria = categoriaRepository.findById(Long.valueOf(id));
+        categoria.setBaja(true);
 
         //se envia la respuesta al servidor
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
@@ -167,17 +174,28 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
 
     @Override
     public void listadoMedicamentos(Farmacia.ListadoMedicamentos request, StreamObserver<Farmacia.APIResponse> responseObserver){
+
+        List<String> nombresMedicamento = new ArrayList<>();
+        for (MedicamentoModel medicamentoModel : medicamentoRepository.findAll()){
+            nombresMedicamento.add(medicamentoModel.getNombre());
+        }
+
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        //response.setResponseCode("1").setResponseMessage("[\"Actron Ibuprofeno Capsulas blandas\",\"Actron Ibuprofeno Comprimidos\",\"Rivotril Clonazepam Comprimidos\",\"Ibuevanol Ibuprofeno Capsulas blandas\",\"Laxamin Bisacodilo Comprimidos\",\"Ketorolac Sinalgico Capsulas blandas\",\"Tafirol Paracetamol Capsulas blandas\",\"Omeprasec Omeprazol Capsulas blandas\",\"Desinflamasol Ibuprofeno Crema\"]");
-        response.setResponseCode("1").setResponseMessage("[{'codigo':'AIC-23142-4', 'nombre':'Actron', 'droga':'Ibuprofeno', 'tipo': 'Capsulas blandas'}, {'codigo':'AIC-42182-8', 'nombre':'Actron', 'droga':'Ibuprofeno', 'tipo': 'Comprimidos'}, {'codigo':'RCC-74512-1', 'nombre':'Rivotril', 'droga':'Clonazepam', 'tipo': 'Comprimidos'}, {'codigo':'IIC-58403-2', 'nombre':'Ibuevanol', 'droga':'Ibuprofeno', 'tipo': 'Capsulas blandas'}, {'codigo':'LBC-49320-9', 'nombre':'Laxamin', 'droga':'Bisacodilo', 'tipo': 'Comprimidos'}, {'codigo':'KSC-92325-3', 'nombre':'Ketorolac', 'droga':'Sinalgico', 'tipo': 'Capsulas blandas'}, {'codigo':'TPC-32473-1', 'nombre':'Tafirol', 'droga':'Paracetamol', 'tipo': 'Capsulas blandas'}, {'codigo':'OOC-08123-5', 'nombre':'Omeprasec', 'droga':'Omeprazol', 'tipo': 'Capsulas blandas'}, {'codigo':'DIC-51325-7', 'nombre':'Desinflamasol', 'droga':'Ibuprofeno', 'tipo': 'Crema'}]");
+        response.setResponseCode("1").setResponseMessage("");
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }
 
     @Override
     public void listadoCodigos(Farmacia.ListadoCodigos request, StreamObserver<Farmacia.APIResponse> responseObserver){
+
+        List<String> nombresCategorias = new ArrayList<>();
+        for (CategoriaModel categoriaModel : categoriaRepository.findAll()){
+            nombresCategorias.add(categoriaModel.getNombre());
+        }
+
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        response.setResponseCode("1").setResponseMessage("[\"AIC-23142-4\",\"AIC-42182-8\",\"RCC-74512-1\",\"IIC-58403-2\",\"LBC-49320-9\",\"KSC-92325-3\",\"TPC-32473-1\",\"OOC-08123-5\",\"DIC-51325-7\"]");
+        response.setResponseCode("1").setResponseMessage("");
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }

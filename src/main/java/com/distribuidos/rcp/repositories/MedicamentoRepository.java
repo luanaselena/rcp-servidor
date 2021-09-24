@@ -9,5 +9,7 @@ import java.io.Serializable;
 
 @Repository
 public interface MedicamentoRepository extends JpaRepository<MedicamentoModel, Serializable> {
+
+    public abstract MedicamentoModel findById(Integer id);
 	
 }
