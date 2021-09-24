@@ -8,6 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,7 +34,10 @@ public class MedicamentoModel {
 
 	@ManyToOne
     @JoinColumn(name = "FK_CATEGORIA", nullable = false, updatable = false)
+	@JsonIgnore
 	private CategoriaModel categoria;
+	
+	public MedicamentoModel() {}
 
 	public MedicamentoModel() {};
 	

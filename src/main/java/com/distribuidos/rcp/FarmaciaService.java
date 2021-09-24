@@ -1,16 +1,18 @@
 package com.distribuidos.rcp;
 
-import com.distribuidos.rcp.model.CategoriaModel;
-import com.distribuidos.rcp.repositories.CategoriaRepository;
-import com.distribuidos.rcp.repositories.MedicamentoRepository;
-import com.distribuidos.rcp.model.MedicamentoModel;
-import io.grpc.stub.StreamObserver;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.IntStream;
 import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import java.util.ArrayList;
-import java.util.List;
+import com.distribuidos.rcp.model.CategoriaModel;
+import com.distribuidos.rcp.model.MedicamentoModel;
+import com.distribuidos.rcp.repositories.CategoriaRepository;
+import com.distribuidos.rcp.repositories.MedicamentoRepository;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.grpc.stub.StreamObserver;
 
 @GRpcService
 public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
@@ -22,6 +24,9 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     @Autowired
     @Qualifier("categoriaRepository")
     private CategoriaRepository categoriaRepository;
+    
+    @Autowired
+	private ObjectMapper objectMapper;
 
     @Override
     public void alta(Farmacia.AltaRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
@@ -91,12 +96,25 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     public void busquedaPorPalabra(Farmacia.BusquedaRequest request, StreamObserver<Farmacia.APIResponse> responseObserver){
         String buscar = request.getBuscar();
         String filtro = request.getFiltro();
-        String columna = request.getColumna();
 
+        List<MedicamentoModel> medicamentos = new ArrayList<>();
         //se aplican los 3 parametros para la busqueda
+        if(buscar.equals("default")) {
+        	medicamentos = medicamentoRepository.findByType(filtro);
+        }
+        else if(buscar.equals("comienza")) {
+        	medicamentos = medicamentoRepository.findByFirstLetter(filtro);
+        }
+        
+        String medicamentosJson = "";
+        try {
+			medicamentosJson = objectMapper.writeValueAsString(medicamentos);
+		} catch (JsonProcessingException e) {
+			throw new RuntimeException("Error serializando medicamentos!");
+		}        
 
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        response.setResponseCode("2").setResponseMessage("Lista de medicamentos con PALABRA o LETRA");
+        response.setResponseCode("2").setResponseMessage(medicamentosJson);
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }
@@ -176,9 +194,16 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
         for (MedicamentoModel medicamentoModel : medicamentoRepository.findAll()){
             nombresMedicamento.add(medicamentoModel.getNombre());
         }
+        
+        String medicamentosJson = "";
+        try {
+			medicamentosJson = objectMapper.writeValueAsString(nombresMedicamento);
+		} catch (JsonProcessingException e) {
+			throw new RuntimeException("Error serializando medicamentos!");
+		}
 
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        response.setResponseCode("1").setResponseMessage("");
+        response.setResponseCode("1").setResponseMessage(medicamentosJson);
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }
