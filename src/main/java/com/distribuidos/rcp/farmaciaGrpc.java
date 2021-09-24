@@ -1,24 +1,11 @@
 package com.distribuidos.rcp;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.15.0)",
+    value = "by gRPC proto compiler (version 1.38.0)",
     comments = "Source: farmacia.proto")
 public final class farmaciaGrpc {
 
@@ -41,22 +28,21 @@ public final class farmaciaGrpc {
     if ((getAltaMethod = farmaciaGrpc.getAltaMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getAltaMethod = farmaciaGrpc.getAltaMethod) == null) {
-          farmaciaGrpc.getAltaMethod = getAltaMethod = 
+          farmaciaGrpc.getAltaMethod = getAltaMethod =
               io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.AltaRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "farmacia", "alta"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "alta"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.AltaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("alta"))
-                  .build();
-          }
+              .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("alta"))
+              .build();
         }
-     }
-     return getAltaMethod;
+      }
+    }
+    return getAltaMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BajaRequest,
@@ -73,22 +59,21 @@ public final class farmaciaGrpc {
     if ((getBajaMethod = farmaciaGrpc.getBajaMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getBajaMethod = farmaciaGrpc.getBajaMethod) == null) {
-          farmaciaGrpc.getBajaMethod = getBajaMethod = 
+          farmaciaGrpc.getBajaMethod = getBajaMethod =
               io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.BajaRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "farmacia", "baja"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "baja"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.BajaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("baja"))
-                  .build();
-          }
+              .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("baja"))
+              .build();
         }
-     }
-     return getBajaMethod;
+      }
+    }
+    return getBajaMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.AltaTipoRequest,
@@ -105,22 +90,21 @@ public final class farmaciaGrpc {
     if ((getAltaTipoMethod = farmaciaGrpc.getAltaTipoMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getAltaTipoMethod = farmaciaGrpc.getAltaTipoMethod) == null) {
-          farmaciaGrpc.getAltaTipoMethod = getAltaTipoMethod = 
+          farmaciaGrpc.getAltaTipoMethod = getAltaTipoMethod =
               io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.AltaTipoRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "farmacia", "altaTipo"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "altaTipo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.AltaTipoRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("altaTipo"))
-                  .build();
-          }
+              .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("altaTipo"))
+              .build();
         }
-     }
-     return getAltaTipoMethod;
+      }
+    }
+    return getAltaTipoMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BajaTipoRequest,
@@ -137,22 +121,21 @@ public final class farmaciaGrpc {
     if ((getBajaTipoMethod = farmaciaGrpc.getBajaTipoMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getBajaTipoMethod = farmaciaGrpc.getBajaTipoMethod) == null) {
-          farmaciaGrpc.getBajaTipoMethod = getBajaTipoMethod = 
+          farmaciaGrpc.getBajaTipoMethod = getBajaTipoMethod =
               io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.BajaTipoRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "farmacia", "bajaTipo"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "bajaTipo"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.BajaTipoRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("bajaTipo"))
-                  .build();
-          }
+              .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("bajaTipo"))
+              .build();
         }
-     }
-     return getBajaTipoMethod;
+      }
+    }
+    return getBajaTipoMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.BusquedaRequest,
@@ -169,22 +152,21 @@ public final class farmaciaGrpc {
     if ((getBusquedaPorPalabraMethod = farmaciaGrpc.getBusquedaPorPalabraMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getBusquedaPorPalabraMethod = farmaciaGrpc.getBusquedaPorPalabraMethod) == null) {
-          farmaciaGrpc.getBusquedaPorPalabraMethod = getBusquedaPorPalabraMethod = 
+          farmaciaGrpc.getBusquedaPorPalabraMethod = getBusquedaPorPalabraMethod =
               io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.BusquedaRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "farmacia", "busquedaPorPalabra"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "busquedaPorPalabra"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.BusquedaRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("busquedaPorPalabra"))
-                  .build();
-          }
+              .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("busquedaPorPalabra"))
+              .build();
         }
-     }
-     return getBusquedaPorPalabraMethod;
+      }
+    }
+    return getBusquedaPorPalabraMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.ListadoMedicamentos,
@@ -201,22 +183,21 @@ public final class farmaciaGrpc {
     if ((getListadoMedicamentosMethod = farmaciaGrpc.getListadoMedicamentosMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getListadoMedicamentosMethod = farmaciaGrpc.getListadoMedicamentosMethod) == null) {
-          farmaciaGrpc.getListadoMedicamentosMethod = getListadoMedicamentosMethod = 
+          farmaciaGrpc.getListadoMedicamentosMethod = getListadoMedicamentosMethod =
               io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.ListadoMedicamentos, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "farmacia", "listadoMedicamentos"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listadoMedicamentos"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.ListadoMedicamentos.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("listadoMedicamentos"))
-                  .build();
-          }
+              .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("listadoMedicamentos"))
+              .build();
         }
-     }
-     return getListadoMedicamentosMethod;
+      }
+    }
+    return getListadoMedicamentosMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.ListadoCodigos,
@@ -233,22 +214,21 @@ public final class farmaciaGrpc {
     if ((getListadoCodigosMethod = farmaciaGrpc.getListadoCodigosMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getListadoCodigosMethod = farmaciaGrpc.getListadoCodigosMethod) == null) {
-          farmaciaGrpc.getListadoCodigosMethod = getListadoCodigosMethod = 
+          farmaciaGrpc.getListadoCodigosMethod = getListadoCodigosMethod =
               io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.ListadoCodigos, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "farmacia", "listadoCodigos"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "listadoCodigos"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.ListadoCodigos.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("listadoCodigos"))
-                  .build();
-          }
+              .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("listadoCodigos"))
+              .build();
         }
-     }
-     return getListadoCodigosMethod;
+      }
+    }
+    return getListadoCodigosMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest,
@@ -265,29 +245,35 @@ public final class farmaciaGrpc {
     if ((getDigitoVerificadorMethod = farmaciaGrpc.getDigitoVerificadorMethod) == null) {
       synchronized (farmaciaGrpc.class) {
         if ((getDigitoVerificadorMethod = farmaciaGrpc.getDigitoVerificadorMethod) == null) {
-          farmaciaGrpc.getDigitoVerificadorMethod = getDigitoVerificadorMethod = 
+          farmaciaGrpc.getDigitoVerificadorMethod = getDigitoVerificadorMethod =
               io.grpc.MethodDescriptor.<com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest, com.distribuidos.rcp.Farmacia.APIResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(
-                  "farmacia", "digitoVerificador"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "digitoVerificador"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.distribuidos.rcp.Farmacia.APIResponse.getDefaultInstance()))
-                  .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("digitoVerificador"))
-                  .build();
-          }
+              .setSchemaDescriptor(new farmaciaMethodDescriptorSupplier("digitoVerificador"))
+              .build();
         }
-     }
-     return getDigitoVerificadorMethod;
+      }
+    }
+    return getDigitoVerificadorMethod;
   }
 
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static farmaciaStub newStub(io.grpc.Channel channel) {
-    return new farmaciaStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<farmaciaStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<farmaciaStub>() {
+        @java.lang.Override
+        public farmaciaStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new farmaciaStub(channel, callOptions);
+        }
+      };
+    return farmaciaStub.newStub(factory, channel);
   }
 
   /**
@@ -295,7 +281,14 @@ public final class farmaciaGrpc {
    */
   public static farmaciaBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    return new farmaciaBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<farmaciaBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<farmaciaBlockingStub>() {
+        @java.lang.Override
+        public farmaciaBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new farmaciaBlockingStub(channel, callOptions);
+        }
+      };
+    return farmaciaBlockingStub.newStub(factory, channel);
   }
 
   /**
@@ -303,7 +296,14 @@ public final class farmaciaGrpc {
    */
   public static farmaciaFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    return new farmaciaFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<farmaciaFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<farmaciaFutureStub>() {
+        @java.lang.Override
+        public farmaciaFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new farmaciaFutureStub(channel, callOptions);
+        }
+      };
+    return farmaciaFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -314,112 +314,112 @@ public final class farmaciaGrpc {
      */
     public void alta(com.distribuidos.rcp.Farmacia.AltaRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getAltaMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAltaMethod(), responseObserver);
     }
 
     /**
      */
     public void baja(com.distribuidos.rcp.Farmacia.BajaRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getBajaMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBajaMethod(), responseObserver);
     }
 
     /**
      */
     public void altaTipo(com.distribuidos.rcp.Farmacia.AltaTipoRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getAltaTipoMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAltaTipoMethod(), responseObserver);
     }
 
     /**
      */
     public void bajaTipo(com.distribuidos.rcp.Farmacia.BajaTipoRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getBajaTipoMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBajaTipoMethod(), responseObserver);
     }
 
     /**
      */
     public void busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getBusquedaPorPalabraMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBusquedaPorPalabraMethod(), responseObserver);
     }
 
     /**
      */
     public void listadoMedicamentos(com.distribuidos.rcp.Farmacia.ListadoMedicamentos request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListadoMedicamentosMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListadoMedicamentosMethod(), responseObserver);
     }
 
     /**
      */
     public void listadoCodigos(com.distribuidos.rcp.Farmacia.ListadoCodigos request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getListadoCodigosMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListadoCodigosMethod(), responseObserver);
     }
 
     /**
      */
     public void digitoVerificador(com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnimplementedUnaryCall(getDigitoVerificadorMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDigitoVerificadorMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getAltaMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.distribuidos.rcp.Farmacia.AltaRequest,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_ALTA)))
           .addMethod(
             getBajaMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.distribuidos.rcp.Farmacia.BajaRequest,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_BAJA)))
           .addMethod(
             getAltaTipoMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.distribuidos.rcp.Farmacia.AltaTipoRequest,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_ALTA_TIPO)))
           .addMethod(
             getBajaTipoMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.distribuidos.rcp.Farmacia.BajaTipoRequest,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_BAJA_TIPO)))
           .addMethod(
             getBusquedaPorPalabraMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.distribuidos.rcp.Farmacia.BusquedaRequest,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_BUSQUEDA_POR_PALABRA)))
           .addMethod(
             getListadoMedicamentosMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.distribuidos.rcp.Farmacia.ListadoMedicamentos,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_LISTADO_MEDICAMENTOS)))
           .addMethod(
             getListadoCodigosMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.distribuidos.rcp.Farmacia.ListadoCodigos,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
                   this, METHODID_LISTADO_CODIGOS)))
           .addMethod(
             getDigitoVerificadorMethod(),
-            asyncUnaryCall(
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest,
                 com.distribuidos.rcp.Farmacia.APIResponse>(
@@ -430,19 +430,15 @@ public final class farmaciaGrpc {
 
   /**
    */
-  public static final class farmaciaStub extends io.grpc.stub.AbstractStub<farmaciaStub> {
-    private farmaciaStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private farmaciaStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class farmaciaStub extends io.grpc.stub.AbstractAsyncStub<farmaciaStub> {
+    private farmaciaStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected farmaciaStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected farmaciaStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new farmaciaStub(channel, callOptions);
     }
 
@@ -450,7 +446,7 @@ public final class farmaciaGrpc {
      */
     public void alta(com.distribuidos.rcp.Farmacia.AltaRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAltaMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -458,7 +454,7 @@ public final class farmaciaGrpc {
      */
     public void baja(com.distribuidos.rcp.Farmacia.BajaRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBajaMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -466,7 +462,7 @@ public final class farmaciaGrpc {
      */
     public void altaTipo(com.distribuidos.rcp.Farmacia.AltaTipoRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAltaTipoMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -474,7 +470,7 @@ public final class farmaciaGrpc {
      */
     public void bajaTipo(com.distribuidos.rcp.Farmacia.BajaTipoRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBajaTipoMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -482,7 +478,7 @@ public final class farmaciaGrpc {
      */
     public void busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBusquedaPorPalabraMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -490,7 +486,7 @@ public final class farmaciaGrpc {
      */
     public void listadoMedicamentos(com.distribuidos.rcp.Farmacia.ListadoMedicamentos request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListadoMedicamentosMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -498,7 +494,7 @@ public final class farmaciaGrpc {
      */
     public void listadoCodigos(com.distribuidos.rcp.Farmacia.ListadoCodigos request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListadoCodigosMethod(), getCallOptions()), request, responseObserver);
     }
 
@@ -506,101 +502,93 @@ public final class farmaciaGrpc {
      */
     public void digitoVerificador(com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest request,
         io.grpc.stub.StreamObserver<com.distribuidos.rcp.Farmacia.APIResponse> responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDigitoVerificadorMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
    */
-  public static final class farmaciaBlockingStub extends io.grpc.stub.AbstractStub<farmaciaBlockingStub> {
-    private farmaciaBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private farmaciaBlockingStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class farmaciaBlockingStub extends io.grpc.stub.AbstractBlockingStub<farmaciaBlockingStub> {
+    private farmaciaBlockingStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected farmaciaBlockingStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected farmaciaBlockingStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new farmaciaBlockingStub(channel, callOptions);
     }
 
     /**
      */
     public com.distribuidos.rcp.Farmacia.APIResponse alta(com.distribuidos.rcp.Farmacia.AltaRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAltaMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.distribuidos.rcp.Farmacia.APIResponse baja(com.distribuidos.rcp.Farmacia.BajaRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBajaMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.distribuidos.rcp.Farmacia.APIResponse altaTipo(com.distribuidos.rcp.Farmacia.AltaTipoRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAltaTipoMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.distribuidos.rcp.Farmacia.APIResponse bajaTipo(com.distribuidos.rcp.Farmacia.BajaTipoRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBajaTipoMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.distribuidos.rcp.Farmacia.APIResponse busquedaPorPalabra(com.distribuidos.rcp.Farmacia.BusquedaRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBusquedaPorPalabraMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.distribuidos.rcp.Farmacia.APIResponse listadoMedicamentos(com.distribuidos.rcp.Farmacia.ListadoMedicamentos request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListadoMedicamentosMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.distribuidos.rcp.Farmacia.APIResponse listadoCodigos(com.distribuidos.rcp.Farmacia.ListadoCodigos request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListadoCodigosMethod(), getCallOptions(), request);
     }
 
     /**
      */
     public com.distribuidos.rcp.Farmacia.APIResponse digitoVerificador(com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDigitoVerificadorMethod(), getCallOptions(), request);
     }
   }
 
   /**
    */
-  public static final class farmaciaFutureStub extends io.grpc.stub.AbstractStub<farmaciaFutureStub> {
-    private farmaciaFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
-    private farmaciaFutureStub(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+  public static final class farmaciaFutureStub extends io.grpc.stub.AbstractFutureStub<farmaciaFutureStub> {
+    private farmaciaFutureStub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected farmaciaFutureStub build(io.grpc.Channel channel,
-        io.grpc.CallOptions callOptions) {
+    protected farmaciaFutureStub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new farmaciaFutureStub(channel, callOptions);
     }
 
@@ -608,7 +596,7 @@ public final class farmaciaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> alta(
         com.distribuidos.rcp.Farmacia.AltaRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAltaMethod(), getCallOptions()), request);
     }
 
@@ -616,7 +604,7 @@ public final class farmaciaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> baja(
         com.distribuidos.rcp.Farmacia.BajaRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBajaMethod(), getCallOptions()), request);
     }
 
@@ -624,7 +612,7 @@ public final class farmaciaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> altaTipo(
         com.distribuidos.rcp.Farmacia.AltaTipoRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAltaTipoMethod(), getCallOptions()), request);
     }
 
@@ -632,7 +620,7 @@ public final class farmaciaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> bajaTipo(
         com.distribuidos.rcp.Farmacia.BajaTipoRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBajaTipoMethod(), getCallOptions()), request);
     }
 
@@ -640,7 +628,7 @@ public final class farmaciaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> busquedaPorPalabra(
         com.distribuidos.rcp.Farmacia.BusquedaRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBusquedaPorPalabraMethod(), getCallOptions()), request);
     }
 
@@ -648,7 +636,7 @@ public final class farmaciaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> listadoMedicamentos(
         com.distribuidos.rcp.Farmacia.ListadoMedicamentos request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListadoMedicamentosMethod(), getCallOptions()), request);
     }
 
@@ -656,7 +644,7 @@ public final class farmaciaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> listadoCodigos(
         com.distribuidos.rcp.Farmacia.ListadoCodigos request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListadoCodigosMethod(), getCallOptions()), request);
     }
 
@@ -664,7 +652,7 @@ public final class farmaciaGrpc {
      */
     public com.google.common.util.concurrent.ListenableFuture<com.distribuidos.rcp.Farmacia.APIResponse> digitoVerificador(
         com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDigitoVerificadorMethod(), getCallOptions()), request);
     }
   }

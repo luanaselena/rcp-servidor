@@ -19,51 +19,49 @@ public final class Farmacia {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
      * <code>string nombre = 2;</code>
+     * @return The nombre.
      */
     java.lang.String getNombre();
     /**
      * <code>string nombre = 2;</code>
+     * @return The bytes for nombre.
      */
     com.google.protobuf.ByteString
         getNombreBytes();
 
     /**
      * <code>string codigo = 3;</code>
+     * @return The codigo.
      */
     java.lang.String getCodigo();
     /**
      * <code>string codigo = 3;</code>
+     * @return The bytes for codigo.
      */
     com.google.protobuf.ByteString
         getCodigoBytes();
 
     /**
      * <code>string droga = 4;</code>
+     * @return The droga.
      */
     java.lang.String getDroga();
     /**
      * <code>string droga = 4;</code>
+     * @return The bytes for droga.
      */
     com.google.protobuf.ByteString
         getDrogaBytes();
 
     /**
      * <code>string tipo = 5;</code>
+     * @return The tipo.
      */
     java.lang.String getTipo();
     /**
      * <code>string tipo = 5;</code>
+     * @return The bytes for tipo.
      */
     com.google.protobuf.ByteString
         getTipoBytes();
@@ -71,7 +69,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code AltaRequest}
    */
-  public  static final class AltaRequest extends
+  public static final class AltaRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:AltaRequest)
       AltaRequestOrBuilder {
@@ -81,11 +79,17 @@ public final class Farmacia {
       super(builder);
     }
     private AltaRequest() {
-      id_ = "";
       nombre_ = "";
       codigo_ = "";
       droga_ = "";
       tipo_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AltaRequest();
     }
 
     @java.lang.Override
@@ -101,7 +105,6 @@ public final class Farmacia {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -112,12 +115,6 @@ public final class Farmacia {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
@@ -143,7 +140,7 @@ public final class Farmacia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -174,45 +171,13 @@ public final class Farmacia {
               com.distribuidos.rcp.Farmacia.AltaRequest.class, com.distribuidos.rcp.Farmacia.AltaRequest.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 1;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int NOMBRE_FIELD_NUMBER = 2;
     private volatile java.lang.Object nombre_;
     /**
      * <code>string nombre = 2;</code>
+     * @return The nombre.
      */
+    @java.lang.Override
     public java.lang.String getNombre() {
       java.lang.Object ref = nombre_;
       if (ref instanceof java.lang.String) {
@@ -227,7 +192,9 @@ public final class Farmacia {
     }
     /**
      * <code>string nombre = 2;</code>
+     * @return The bytes for nombre.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNombreBytes() {
       java.lang.Object ref = nombre_;
@@ -246,7 +213,9 @@ public final class Farmacia {
     private volatile java.lang.Object codigo_;
     /**
      * <code>string codigo = 3;</code>
+     * @return The codigo.
      */
+    @java.lang.Override
     public java.lang.String getCodigo() {
       java.lang.Object ref = codigo_;
       if (ref instanceof java.lang.String) {
@@ -261,7 +230,9 @@ public final class Farmacia {
     }
     /**
      * <code>string codigo = 3;</code>
+     * @return The bytes for codigo.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getCodigoBytes() {
       java.lang.Object ref = codigo_;
@@ -280,7 +251,9 @@ public final class Farmacia {
     private volatile java.lang.Object droga_;
     /**
      * <code>string droga = 4;</code>
+     * @return The droga.
      */
+    @java.lang.Override
     public java.lang.String getDroga() {
       java.lang.Object ref = droga_;
       if (ref instanceof java.lang.String) {
@@ -295,7 +268,9 @@ public final class Farmacia {
     }
     /**
      * <code>string droga = 4;</code>
+     * @return The bytes for droga.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDrogaBytes() {
       java.lang.Object ref = droga_;
@@ -314,7 +289,9 @@ public final class Farmacia {
     private volatile java.lang.Object tipo_;
     /**
      * <code>string tipo = 5;</code>
+     * @return The tipo.
      */
+    @java.lang.Override
     public java.lang.String getTipo() {
       java.lang.Object ref = tipo_;
       if (ref instanceof java.lang.String) {
@@ -329,7 +306,9 @@ public final class Farmacia {
     }
     /**
      * <code>string tipo = 5;</code>
+     * @return The bytes for tipo.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTipoBytes() {
       java.lang.Object ref = tipo_;
@@ -358,9 +337,6 @@ public final class Farmacia {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
       if (!getNombreBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nombre_);
       }
@@ -382,9 +358,6 @@ public final class Farmacia {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
       if (!getNombreBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nombre_);
       }
@@ -412,19 +385,16 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.AltaRequest other = (com.distribuidos.rcp.Farmacia.AltaRequest) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getNombre()
-          .equals(other.getNombre());
-      result = result && getCodigo()
-          .equals(other.getCodigo());
-      result = result && getDroga()
-          .equals(other.getDroga());
-      result = result && getTipo()
-          .equals(other.getTipo());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getNombre()
+          .equals(other.getNombre())) return false;
+      if (!getCodigo()
+          .equals(other.getCodigo())) return false;
+      if (!getDroga()
+          .equals(other.getDroga())) return false;
+      if (!getTipo()
+          .equals(other.getTipo())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -434,8 +404,6 @@ public final class Farmacia {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NOMBRE_FIELD_NUMBER;
       hash = (53 * hash) + getNombre().hashCode();
       hash = (37 * hash) + CODIGO_FIELD_NUMBER;
@@ -577,8 +545,6 @@ public final class Farmacia {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
-
         nombre_ = "";
 
         codigo_ = "";
@@ -613,7 +579,6 @@ public final class Farmacia {
       @java.lang.Override
       public com.distribuidos.rcp.Farmacia.AltaRequest buildPartial() {
         com.distribuidos.rcp.Farmacia.AltaRequest result = new com.distribuidos.rcp.Farmacia.AltaRequest(this);
-        result.id_ = id_;
         result.nombre_ = nombre_;
         result.codigo_ = codigo_;
         result.droga_ = droga_;
@@ -624,35 +589,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -666,10 +631,6 @@ public final class Farmacia {
 
       public Builder mergeFrom(com.distribuidos.rcp.Farmacia.AltaRequest other) {
         if (other == com.distribuidos.rcp.Farmacia.AltaRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
         if (!other.getNombre().isEmpty()) {
           nombre_ = other.nombre_;
           onChanged();
@@ -715,78 +676,10 @@ public final class Farmacia {
         return this;
       }
 
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object nombre_ = "";
       /**
        * <code>string nombre = 2;</code>
+       * @return The nombre.
        */
       public java.lang.String getNombre() {
         java.lang.Object ref = nombre_;
@@ -802,6 +695,7 @@ public final class Farmacia {
       }
       /**
        * <code>string nombre = 2;</code>
+       * @return The bytes for nombre.
        */
       public com.google.protobuf.ByteString
           getNombreBytes() {
@@ -818,6 +712,8 @@ public final class Farmacia {
       }
       /**
        * <code>string nombre = 2;</code>
+       * @param value The nombre to set.
+       * @return This builder for chaining.
        */
       public Builder setNombre(
           java.lang.String value) {
@@ -831,6 +727,7 @@ public final class Farmacia {
       }
       /**
        * <code>string nombre = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNombre() {
         
@@ -840,6 +737,8 @@ public final class Farmacia {
       }
       /**
        * <code>string nombre = 2;</code>
+       * @param value The bytes for nombre to set.
+       * @return This builder for chaining.
        */
       public Builder setNombreBytes(
           com.google.protobuf.ByteString value) {
@@ -856,6 +755,7 @@ public final class Farmacia {
       private java.lang.Object codigo_ = "";
       /**
        * <code>string codigo = 3;</code>
+       * @return The codigo.
        */
       public java.lang.String getCodigo() {
         java.lang.Object ref = codigo_;
@@ -871,6 +771,7 @@ public final class Farmacia {
       }
       /**
        * <code>string codigo = 3;</code>
+       * @return The bytes for codigo.
        */
       public com.google.protobuf.ByteString
           getCodigoBytes() {
@@ -887,6 +788,8 @@ public final class Farmacia {
       }
       /**
        * <code>string codigo = 3;</code>
+       * @param value The codigo to set.
+       * @return This builder for chaining.
        */
       public Builder setCodigo(
           java.lang.String value) {
@@ -900,6 +803,7 @@ public final class Farmacia {
       }
       /**
        * <code>string codigo = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearCodigo() {
         
@@ -909,6 +813,8 @@ public final class Farmacia {
       }
       /**
        * <code>string codigo = 3;</code>
+       * @param value The bytes for codigo to set.
+       * @return This builder for chaining.
        */
       public Builder setCodigoBytes(
           com.google.protobuf.ByteString value) {
@@ -925,6 +831,7 @@ public final class Farmacia {
       private java.lang.Object droga_ = "";
       /**
        * <code>string droga = 4;</code>
+       * @return The droga.
        */
       public java.lang.String getDroga() {
         java.lang.Object ref = droga_;
@@ -940,6 +847,7 @@ public final class Farmacia {
       }
       /**
        * <code>string droga = 4;</code>
+       * @return The bytes for droga.
        */
       public com.google.protobuf.ByteString
           getDrogaBytes() {
@@ -956,6 +864,8 @@ public final class Farmacia {
       }
       /**
        * <code>string droga = 4;</code>
+       * @param value The droga to set.
+       * @return This builder for chaining.
        */
       public Builder setDroga(
           java.lang.String value) {
@@ -969,6 +879,7 @@ public final class Farmacia {
       }
       /**
        * <code>string droga = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDroga() {
         
@@ -978,6 +889,8 @@ public final class Farmacia {
       }
       /**
        * <code>string droga = 4;</code>
+       * @param value The bytes for droga to set.
+       * @return This builder for chaining.
        */
       public Builder setDrogaBytes(
           com.google.protobuf.ByteString value) {
@@ -994,6 +907,7 @@ public final class Farmacia {
       private java.lang.Object tipo_ = "";
       /**
        * <code>string tipo = 5;</code>
+       * @return The tipo.
        */
       public java.lang.String getTipo() {
         java.lang.Object ref = tipo_;
@@ -1009,6 +923,7 @@ public final class Farmacia {
       }
       /**
        * <code>string tipo = 5;</code>
+       * @return The bytes for tipo.
        */
       public com.google.protobuf.ByteString
           getTipoBytes() {
@@ -1025,6 +940,8 @@ public final class Farmacia {
       }
       /**
        * <code>string tipo = 5;</code>
+       * @param value The tipo to set.
+       * @return This builder for chaining.
        */
       public Builder setTipo(
           java.lang.String value) {
@@ -1038,6 +955,7 @@ public final class Farmacia {
       }
       /**
        * <code>string tipo = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTipo() {
         
@@ -1047,6 +965,8 @@ public final class Farmacia {
       }
       /**
        * <code>string tipo = 5;</code>
+       * @param value The bytes for tipo to set.
+       * @return This builder for chaining.
        */
       public Builder setTipoBytes(
           com.google.protobuf.ByteString value) {
@@ -1062,7 +982,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1118,10 +1038,12 @@ public final class Farmacia {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
@@ -1129,7 +1051,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code BajaRequest}
    */
-  public  static final class BajaRequest extends
+  public static final class BajaRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:BajaRequest)
       BajaRequestOrBuilder {
@@ -1140,6 +1062,13 @@ public final class Farmacia {
     }
     private BajaRequest() {
       id_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BajaRequest();
     }
 
     @java.lang.Override
@@ -1155,7 +1084,6 @@ public final class Farmacia {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1173,7 +1101,7 @@ public final class Farmacia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1208,7 +1136,9 @@ public final class Farmacia {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -1223,7 +1153,9 @@ public final class Farmacia {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -1282,11 +1214,10 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.BajaRequest other = (com.distribuidos.rcp.Farmacia.BajaRequest) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1466,35 +1397,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1544,6 +1475,7 @@ public final class Farmacia {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -1559,6 +1491,7 @@ public final class Farmacia {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -1575,6 +1508,8 @@ public final class Farmacia {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -1588,6 +1523,7 @@ public final class Farmacia {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -1597,6 +1533,8 @@ public final class Farmacia {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -1612,7 +1550,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1667,21 +1605,13 @@ public final class Farmacia {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>string nombre = 2;</code>
+     * <code>string nombre = 1;</code>
+     * @return The nombre.
      */
     java.lang.String getNombre();
     /**
-     * <code>string nombre = 2;</code>
+     * <code>string nombre = 1;</code>
+     * @return The bytes for nombre.
      */
     com.google.protobuf.ByteString
         getNombreBytes();
@@ -1689,7 +1619,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code AltaTipoRequest}
    */
-  public  static final class AltaTipoRequest extends
+  public static final class AltaTipoRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:AltaTipoRequest)
       AltaTipoRequestOrBuilder {
@@ -1699,8 +1629,14 @@ public final class Farmacia {
       super(builder);
     }
     private AltaTipoRequest() {
-      id_ = "";
       nombre_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AltaTipoRequest();
     }
 
     @java.lang.Override
@@ -1716,7 +1652,6 @@ public final class Farmacia {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1730,17 +1665,11 @@ public final class Farmacia {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              id_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
               nombre_ = s;
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1771,45 +1700,13 @@ public final class Farmacia {
               com.distribuidos.rcp.Farmacia.AltaTipoRequest.class, com.distribuidos.rcp.Farmacia.AltaTipoRequest.Builder.class);
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 1;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int NOMBRE_FIELD_NUMBER = 2;
+    public static final int NOMBRE_FIELD_NUMBER = 1;
     private volatile java.lang.Object nombre_;
     /**
-     * <code>string nombre = 2;</code>
+     * <code>string nombre = 1;</code>
+     * @return The nombre.
      */
+    @java.lang.Override
     public java.lang.String getNombre() {
       java.lang.Object ref = nombre_;
       if (ref instanceof java.lang.String) {
@@ -1823,8 +1720,10 @@ public final class Farmacia {
       }
     }
     /**
-     * <code>string nombre = 2;</code>
+     * <code>string nombre = 1;</code>
+     * @return The bytes for nombre.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNombreBytes() {
       java.lang.Object ref = nombre_;
@@ -1853,11 +1752,8 @@ public final class Farmacia {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
       if (!getNombreBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, nombre_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, nombre_);
       }
       unknownFields.writeTo(output);
     }
@@ -1868,11 +1764,8 @@ public final class Farmacia {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
       if (!getNombreBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, nombre_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, nombre_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1889,13 +1782,10 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.AltaTipoRequest other = (com.distribuidos.rcp.Farmacia.AltaTipoRequest) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getNombre()
-          .equals(other.getNombre());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getNombre()
+          .equals(other.getNombre())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1905,8 +1795,6 @@ public final class Farmacia {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
       hash = (37 * hash) + NOMBRE_FIELD_NUMBER;
       hash = (53 * hash) + getNombre().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -2042,8 +1930,6 @@ public final class Farmacia {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
-
         nombre_ = "";
 
         return this;
@@ -2072,7 +1958,6 @@ public final class Farmacia {
       @java.lang.Override
       public com.distribuidos.rcp.Farmacia.AltaTipoRequest buildPartial() {
         com.distribuidos.rcp.Farmacia.AltaTipoRequest result = new com.distribuidos.rcp.Farmacia.AltaTipoRequest(this);
-        result.id_ = id_;
         result.nombre_ = nombre_;
         onBuilt();
         return result;
@@ -2080,35 +1965,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2122,10 +2007,6 @@ public final class Farmacia {
 
       public Builder mergeFrom(com.distribuidos.rcp.Farmacia.AltaTipoRequest other) {
         if (other == com.distribuidos.rcp.Farmacia.AltaTipoRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
         if (!other.getNombre().isEmpty()) {
           nombre_ = other.nombre_;
           onChanged();
@@ -2159,78 +2040,10 @@ public final class Farmacia {
         return this;
       }
 
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object nombre_ = "";
       /**
-       * <code>string nombre = 2;</code>
+       * <code>string nombre = 1;</code>
+       * @return The nombre.
        */
       public java.lang.String getNombre() {
         java.lang.Object ref = nombre_;
@@ -2245,7 +2058,8 @@ public final class Farmacia {
         }
       }
       /**
-       * <code>string nombre = 2;</code>
+       * <code>string nombre = 1;</code>
+       * @return The bytes for nombre.
        */
       public com.google.protobuf.ByteString
           getNombreBytes() {
@@ -2261,7 +2075,9 @@ public final class Farmacia {
         }
       }
       /**
-       * <code>string nombre = 2;</code>
+       * <code>string nombre = 1;</code>
+       * @param value The nombre to set.
+       * @return This builder for chaining.
        */
       public Builder setNombre(
           java.lang.String value) {
@@ -2274,7 +2090,8 @@ public final class Farmacia {
         return this;
       }
       /**
-       * <code>string nombre = 2;</code>
+       * <code>string nombre = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearNombre() {
         
@@ -2283,7 +2100,9 @@ public final class Farmacia {
         return this;
       }
       /**
-       * <code>string nombre = 2;</code>
+       * <code>string nombre = 1;</code>
+       * @param value The bytes for nombre to set.
+       * @return This builder for chaining.
        */
       public Builder setNombreBytes(
           com.google.protobuf.ByteString value) {
@@ -2299,7 +2118,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2355,20 +2174,24 @@ public final class Farmacia {
 
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
     java.lang.String getId();
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
     com.google.protobuf.ByteString
         getIdBytes();
 
     /**
      * <code>string baja = 2;</code>
+     * @return The baja.
      */
     java.lang.String getBaja();
     /**
      * <code>string baja = 2;</code>
+     * @return The bytes for baja.
      */
     com.google.protobuf.ByteString
         getBajaBytes();
@@ -2376,7 +2199,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code BajaTipoRequest}
    */
-  public  static final class BajaTipoRequest extends
+  public static final class BajaTipoRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:BajaTipoRequest)
       BajaTipoRequestOrBuilder {
@@ -2388,6 +2211,13 @@ public final class Farmacia {
     private BajaTipoRequest() {
       id_ = "";
       baja_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BajaTipoRequest();
     }
 
     @java.lang.Override
@@ -2403,7 +2233,6 @@ public final class Farmacia {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2427,7 +2256,7 @@ public final class Farmacia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2462,7 +2291,9 @@ public final class Farmacia {
     private volatile java.lang.Object id_;
     /**
      * <code>string id = 1;</code>
+     * @return The id.
      */
+    @java.lang.Override
     public java.lang.String getId() {
       java.lang.Object ref = id_;
       if (ref instanceof java.lang.String) {
@@ -2477,7 +2308,9 @@ public final class Farmacia {
     }
     /**
      * <code>string id = 1;</code>
+     * @return The bytes for id.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getIdBytes() {
       java.lang.Object ref = id_;
@@ -2496,7 +2329,9 @@ public final class Farmacia {
     private volatile java.lang.Object baja_;
     /**
      * <code>string baja = 2;</code>
+     * @return The baja.
      */
+    @java.lang.Override
     public java.lang.String getBaja() {
       java.lang.Object ref = baja_;
       if (ref instanceof java.lang.String) {
@@ -2511,7 +2346,9 @@ public final class Farmacia {
     }
     /**
      * <code>string baja = 2;</code>
+     * @return The bytes for baja.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBajaBytes() {
       java.lang.Object ref = baja_;
@@ -2576,13 +2413,12 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.BajaTipoRequest other = (com.distribuidos.rcp.Farmacia.BajaTipoRequest) obj;
 
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && getBaja()
-          .equals(other.getBaja());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getId()
+          .equals(other.getId())) return false;
+      if (!getBaja()
+          .equals(other.getBaja())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2767,35 +2603,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2849,6 +2685,7 @@ public final class Farmacia {
       private java.lang.Object id_ = "";
       /**
        * <code>string id = 1;</code>
+       * @return The id.
        */
       public java.lang.String getId() {
         java.lang.Object ref = id_;
@@ -2864,6 +2701,7 @@ public final class Farmacia {
       }
       /**
        * <code>string id = 1;</code>
+       * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
           getIdBytes() {
@@ -2880,6 +2718,8 @@ public final class Farmacia {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
        */
       public Builder setId(
           java.lang.String value) {
@@ -2893,6 +2733,7 @@ public final class Farmacia {
       }
       /**
        * <code>string id = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearId() {
         
@@ -2902,6 +2743,8 @@ public final class Farmacia {
       }
       /**
        * <code>string id = 1;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
@@ -2918,6 +2761,7 @@ public final class Farmacia {
       private java.lang.Object baja_ = "";
       /**
        * <code>string baja = 2;</code>
+       * @return The baja.
        */
       public java.lang.String getBaja() {
         java.lang.Object ref = baja_;
@@ -2933,6 +2777,7 @@ public final class Farmacia {
       }
       /**
        * <code>string baja = 2;</code>
+       * @return The bytes for baja.
        */
       public com.google.protobuf.ByteString
           getBajaBytes() {
@@ -2949,6 +2794,8 @@ public final class Farmacia {
       }
       /**
        * <code>string baja = 2;</code>
+       * @param value The baja to set.
+       * @return This builder for chaining.
        */
       public Builder setBaja(
           java.lang.String value) {
@@ -2962,6 +2809,7 @@ public final class Farmacia {
       }
       /**
        * <code>string baja = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBaja() {
         
@@ -2971,6 +2819,8 @@ public final class Farmacia {
       }
       /**
        * <code>string baja = 2;</code>
+       * @param value The bytes for baja to set.
+       * @return This builder for chaining.
        */
       public Builder setBajaBytes(
           com.google.protobuf.ByteString value) {
@@ -2986,7 +2836,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3042,30 +2892,36 @@ public final class Farmacia {
 
     /**
      * <code>string buscar = 1;</code>
+     * @return The buscar.
      */
     java.lang.String getBuscar();
     /**
      * <code>string buscar = 1;</code>
+     * @return The bytes for buscar.
      */
     com.google.protobuf.ByteString
         getBuscarBytes();
 
     /**
      * <code>string filtro = 2;</code>
+     * @return The filtro.
      */
     java.lang.String getFiltro();
     /**
      * <code>string filtro = 2;</code>
+     * @return The bytes for filtro.
      */
     com.google.protobuf.ByteString
         getFiltroBytes();
 
     /**
      * <code>string columna = 3;</code>
+     * @return The columna.
      */
     java.lang.String getColumna();
     /**
      * <code>string columna = 3;</code>
+     * @return The bytes for columna.
      */
     com.google.protobuf.ByteString
         getColumnaBytes();
@@ -3073,7 +2929,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code BusquedaRequest}
    */
-  public  static final class BusquedaRequest extends
+  public static final class BusquedaRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:BusquedaRequest)
       BusquedaRequestOrBuilder {
@@ -3089,6 +2945,13 @@ public final class Farmacia {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new BusquedaRequest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3101,7 +2964,6 @@ public final class Farmacia {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -3131,7 +2993,7 @@ public final class Farmacia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3166,7 +3028,9 @@ public final class Farmacia {
     private volatile java.lang.Object buscar_;
     /**
      * <code>string buscar = 1;</code>
+     * @return The buscar.
      */
+    @java.lang.Override
     public java.lang.String getBuscar() {
       java.lang.Object ref = buscar_;
       if (ref instanceof java.lang.String) {
@@ -3181,7 +3045,9 @@ public final class Farmacia {
     }
     /**
      * <code>string buscar = 1;</code>
+     * @return The bytes for buscar.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getBuscarBytes() {
       java.lang.Object ref = buscar_;
@@ -3200,7 +3066,9 @@ public final class Farmacia {
     private volatile java.lang.Object filtro_;
     /**
      * <code>string filtro = 2;</code>
+     * @return The filtro.
      */
+    @java.lang.Override
     public java.lang.String getFiltro() {
       java.lang.Object ref = filtro_;
       if (ref instanceof java.lang.String) {
@@ -3215,7 +3083,9 @@ public final class Farmacia {
     }
     /**
      * <code>string filtro = 2;</code>
+     * @return The bytes for filtro.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getFiltroBytes() {
       java.lang.Object ref = filtro_;
@@ -3234,7 +3104,9 @@ public final class Farmacia {
     private volatile java.lang.Object columna_;
     /**
      * <code>string columna = 3;</code>
+     * @return The columna.
      */
+    @java.lang.Override
     public java.lang.String getColumna() {
       java.lang.Object ref = columna_;
       if (ref instanceof java.lang.String) {
@@ -3249,7 +3121,9 @@ public final class Farmacia {
     }
     /**
      * <code>string columna = 3;</code>
+     * @return The bytes for columna.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getColumnaBytes() {
       java.lang.Object ref = columna_;
@@ -3320,15 +3194,14 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.BusquedaRequest other = (com.distribuidos.rcp.Farmacia.BusquedaRequest) obj;
 
-      boolean result = true;
-      result = result && getBuscar()
-          .equals(other.getBuscar());
-      result = result && getFiltro()
-          .equals(other.getFiltro());
-      result = result && getColumna()
-          .equals(other.getColumna());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getBuscar()
+          .equals(other.getBuscar())) return false;
+      if (!getFiltro()
+          .equals(other.getFiltro())) return false;
+      if (!getColumna()
+          .equals(other.getColumna())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3518,35 +3391,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -3604,6 +3477,7 @@ public final class Farmacia {
       private java.lang.Object buscar_ = "";
       /**
        * <code>string buscar = 1;</code>
+       * @return The buscar.
        */
       public java.lang.String getBuscar() {
         java.lang.Object ref = buscar_;
@@ -3619,6 +3493,7 @@ public final class Farmacia {
       }
       /**
        * <code>string buscar = 1;</code>
+       * @return The bytes for buscar.
        */
       public com.google.protobuf.ByteString
           getBuscarBytes() {
@@ -3635,6 +3510,8 @@ public final class Farmacia {
       }
       /**
        * <code>string buscar = 1;</code>
+       * @param value The buscar to set.
+       * @return This builder for chaining.
        */
       public Builder setBuscar(
           java.lang.String value) {
@@ -3648,6 +3525,7 @@ public final class Farmacia {
       }
       /**
        * <code>string buscar = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBuscar() {
         
@@ -3657,6 +3535,8 @@ public final class Farmacia {
       }
       /**
        * <code>string buscar = 1;</code>
+       * @param value The bytes for buscar to set.
+       * @return This builder for chaining.
        */
       public Builder setBuscarBytes(
           com.google.protobuf.ByteString value) {
@@ -3673,6 +3553,7 @@ public final class Farmacia {
       private java.lang.Object filtro_ = "";
       /**
        * <code>string filtro = 2;</code>
+       * @return The filtro.
        */
       public java.lang.String getFiltro() {
         java.lang.Object ref = filtro_;
@@ -3688,6 +3569,7 @@ public final class Farmacia {
       }
       /**
        * <code>string filtro = 2;</code>
+       * @return The bytes for filtro.
        */
       public com.google.protobuf.ByteString
           getFiltroBytes() {
@@ -3704,6 +3586,8 @@ public final class Farmacia {
       }
       /**
        * <code>string filtro = 2;</code>
+       * @param value The filtro to set.
+       * @return This builder for chaining.
        */
       public Builder setFiltro(
           java.lang.String value) {
@@ -3717,6 +3601,7 @@ public final class Farmacia {
       }
       /**
        * <code>string filtro = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFiltro() {
         
@@ -3726,6 +3611,8 @@ public final class Farmacia {
       }
       /**
        * <code>string filtro = 2;</code>
+       * @param value The bytes for filtro to set.
+       * @return This builder for chaining.
        */
       public Builder setFiltroBytes(
           com.google.protobuf.ByteString value) {
@@ -3742,6 +3629,7 @@ public final class Farmacia {
       private java.lang.Object columna_ = "";
       /**
        * <code>string columna = 3;</code>
+       * @return The columna.
        */
       public java.lang.String getColumna() {
         java.lang.Object ref = columna_;
@@ -3757,6 +3645,7 @@ public final class Farmacia {
       }
       /**
        * <code>string columna = 3;</code>
+       * @return The bytes for columna.
        */
       public com.google.protobuf.ByteString
           getColumnaBytes() {
@@ -3773,6 +3662,8 @@ public final class Farmacia {
       }
       /**
        * <code>string columna = 3;</code>
+       * @param value The columna to set.
+       * @return This builder for chaining.
        */
       public Builder setColumna(
           java.lang.String value) {
@@ -3786,6 +3677,7 @@ public final class Farmacia {
       }
       /**
        * <code>string columna = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearColumna() {
         
@@ -3795,6 +3687,8 @@ public final class Farmacia {
       }
       /**
        * <code>string columna = 3;</code>
+       * @param value The bytes for columna to set.
+       * @return This builder for chaining.
        */
       public Builder setColumnaBytes(
           com.google.protobuf.ByteString value) {
@@ -3810,7 +3704,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3867,7 +3761,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code ListadoMedicamentos}
    */
-  public  static final class ListadoMedicamentos extends
+  public static final class ListadoMedicamentos extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ListadoMedicamentos)
       ListadoMedicamentosOrBuilder {
@@ -3877,6 +3771,13 @@ public final class Farmacia {
       super(builder);
     }
     private ListadoMedicamentos() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListadoMedicamentos();
     }
 
     @java.lang.Override
@@ -3903,7 +3804,7 @@ public final class Farmacia {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -3972,9 +3873,8 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.ListadoMedicamentos other = (com.distribuidos.rcp.Farmacia.ListadoMedicamentos) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4149,35 +4049,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4222,7 +4122,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4279,7 +4179,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code ListadoCodigos}
    */
-  public  static final class ListadoCodigos extends
+  public static final class ListadoCodigos extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ListadoCodigos)
       ListadoCodigosOrBuilder {
@@ -4289,6 +4189,13 @@ public final class Farmacia {
       super(builder);
     }
     private ListadoCodigos() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ListadoCodigos();
     }
 
     @java.lang.Override
@@ -4315,7 +4222,7 @@ public final class Farmacia {
               done = true;
               break;
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4384,9 +4291,8 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.ListadoCodigos other = (com.distribuidos.rcp.Farmacia.ListadoCodigos) obj;
 
-      boolean result = true;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4561,35 +4467,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -4634,7 +4540,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4690,10 +4596,12 @@ public final class Farmacia {
 
     /**
      * <code>string digito = 1;</code>
+     * @return The digito.
      */
     java.lang.String getDigito();
     /**
      * <code>string digito = 1;</code>
+     * @return The bytes for digito.
      */
     com.google.protobuf.ByteString
         getDigitoBytes();
@@ -4701,7 +4609,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code DigitoVerificadorRequest}
    */
-  public  static final class DigitoVerificadorRequest extends
+  public static final class DigitoVerificadorRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:DigitoVerificadorRequest)
       DigitoVerificadorRequestOrBuilder {
@@ -4712,6 +4620,13 @@ public final class Farmacia {
     }
     private DigitoVerificadorRequest() {
       digito_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DigitoVerificadorRequest();
     }
 
     @java.lang.Override
@@ -4727,7 +4642,6 @@ public final class Farmacia {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -4745,7 +4659,7 @@ public final class Farmacia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4780,7 +4694,9 @@ public final class Farmacia {
     private volatile java.lang.Object digito_;
     /**
      * <code>string digito = 1;</code>
+     * @return The digito.
      */
+    @java.lang.Override
     public java.lang.String getDigito() {
       java.lang.Object ref = digito_;
       if (ref instanceof java.lang.String) {
@@ -4795,7 +4711,9 @@ public final class Farmacia {
     }
     /**
      * <code>string digito = 1;</code>
+     * @return The bytes for digito.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDigitoBytes() {
       java.lang.Object ref = digito_;
@@ -4854,11 +4772,10 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest other = (com.distribuidos.rcp.Farmacia.DigitoVerificadorRequest) obj;
 
-      boolean result = true;
-      result = result && getDigito()
-          .equals(other.getDigito());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDigito()
+          .equals(other.getDigito())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5038,35 +4955,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5116,6 +5033,7 @@ public final class Farmacia {
       private java.lang.Object digito_ = "";
       /**
        * <code>string digito = 1;</code>
+       * @return The digito.
        */
       public java.lang.String getDigito() {
         java.lang.Object ref = digito_;
@@ -5131,6 +5049,7 @@ public final class Farmacia {
       }
       /**
        * <code>string digito = 1;</code>
+       * @return The bytes for digito.
        */
       public com.google.protobuf.ByteString
           getDigitoBytes() {
@@ -5147,6 +5066,8 @@ public final class Farmacia {
       }
       /**
        * <code>string digito = 1;</code>
+       * @param value The digito to set.
+       * @return This builder for chaining.
        */
       public Builder setDigito(
           java.lang.String value) {
@@ -5160,6 +5081,7 @@ public final class Farmacia {
       }
       /**
        * <code>string digito = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDigito() {
         
@@ -5169,6 +5091,8 @@ public final class Farmacia {
       }
       /**
        * <code>string digito = 1;</code>
+       * @param value The bytes for digito to set.
+       * @return This builder for chaining.
        */
       public Builder setDigitoBytes(
           com.google.protobuf.ByteString value) {
@@ -5184,7 +5108,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5240,20 +5164,24 @@ public final class Farmacia {
 
     /**
      * <code>string responseMessage = 1;</code>
+     * @return The responseMessage.
      */
     java.lang.String getResponseMessage();
     /**
      * <code>string responseMessage = 1;</code>
+     * @return The bytes for responseMessage.
      */
     com.google.protobuf.ByteString
         getResponseMessageBytes();
 
     /**
      * <code>string responseCode = 2;</code>
+     * @return The responseCode.
      */
     java.lang.String getResponseCode();
     /**
      * <code>string responseCode = 2;</code>
+     * @return The bytes for responseCode.
      */
     com.google.protobuf.ByteString
         getResponseCodeBytes();
@@ -5261,7 +5189,7 @@ public final class Farmacia {
   /**
    * Protobuf type {@code APIResponse}
    */
-  public  static final class APIResponse extends
+  public static final class APIResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:APIResponse)
       APIResponseOrBuilder {
@@ -5273,6 +5201,13 @@ public final class Farmacia {
     private APIResponse() {
       responseMessage_ = "";
       responseCode_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new APIResponse();
     }
 
     @java.lang.Override
@@ -5288,7 +5223,6 @@ public final class Farmacia {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5312,7 +5246,7 @@ public final class Farmacia {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5347,7 +5281,9 @@ public final class Farmacia {
     private volatile java.lang.Object responseMessage_;
     /**
      * <code>string responseMessage = 1;</code>
+     * @return The responseMessage.
      */
+    @java.lang.Override
     public java.lang.String getResponseMessage() {
       java.lang.Object ref = responseMessage_;
       if (ref instanceof java.lang.String) {
@@ -5362,7 +5298,9 @@ public final class Farmacia {
     }
     /**
      * <code>string responseMessage = 1;</code>
+     * @return The bytes for responseMessage.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResponseMessageBytes() {
       java.lang.Object ref = responseMessage_;
@@ -5381,7 +5319,9 @@ public final class Farmacia {
     private volatile java.lang.Object responseCode_;
     /**
      * <code>string responseCode = 2;</code>
+     * @return The responseCode.
      */
+    @java.lang.Override
     public java.lang.String getResponseCode() {
       java.lang.Object ref = responseCode_;
       if (ref instanceof java.lang.String) {
@@ -5396,7 +5336,9 @@ public final class Farmacia {
     }
     /**
      * <code>string responseCode = 2;</code>
+     * @return The bytes for responseCode.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getResponseCodeBytes() {
       java.lang.Object ref = responseCode_;
@@ -5461,13 +5403,12 @@ public final class Farmacia {
       }
       com.distribuidos.rcp.Farmacia.APIResponse other = (com.distribuidos.rcp.Farmacia.APIResponse) obj;
 
-      boolean result = true;
-      result = result && getResponseMessage()
-          .equals(other.getResponseMessage());
-      result = result && getResponseCode()
-          .equals(other.getResponseCode());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getResponseMessage()
+          .equals(other.getResponseMessage())) return false;
+      if (!getResponseCode()
+          .equals(other.getResponseCode())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5652,35 +5593,35 @@ public final class Farmacia {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -5734,6 +5675,7 @@ public final class Farmacia {
       private java.lang.Object responseMessage_ = "";
       /**
        * <code>string responseMessage = 1;</code>
+       * @return The responseMessage.
        */
       public java.lang.String getResponseMessage() {
         java.lang.Object ref = responseMessage_;
@@ -5749,6 +5691,7 @@ public final class Farmacia {
       }
       /**
        * <code>string responseMessage = 1;</code>
+       * @return The bytes for responseMessage.
        */
       public com.google.protobuf.ByteString
           getResponseMessageBytes() {
@@ -5765,6 +5708,8 @@ public final class Farmacia {
       }
       /**
        * <code>string responseMessage = 1;</code>
+       * @param value The responseMessage to set.
+       * @return This builder for chaining.
        */
       public Builder setResponseMessage(
           java.lang.String value) {
@@ -5778,6 +5723,7 @@ public final class Farmacia {
       }
       /**
        * <code>string responseMessage = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResponseMessage() {
         
@@ -5787,6 +5733,8 @@ public final class Farmacia {
       }
       /**
        * <code>string responseMessage = 1;</code>
+       * @param value The bytes for responseMessage to set.
+       * @return This builder for chaining.
        */
       public Builder setResponseMessageBytes(
           com.google.protobuf.ByteString value) {
@@ -5803,6 +5751,7 @@ public final class Farmacia {
       private java.lang.Object responseCode_ = "";
       /**
        * <code>string responseCode = 2;</code>
+       * @return The responseCode.
        */
       public java.lang.String getResponseCode() {
         java.lang.Object ref = responseCode_;
@@ -5818,6 +5767,7 @@ public final class Farmacia {
       }
       /**
        * <code>string responseCode = 2;</code>
+       * @return The bytes for responseCode.
        */
       public com.google.protobuf.ByteString
           getResponseCodeBytes() {
@@ -5834,6 +5784,8 @@ public final class Farmacia {
       }
       /**
        * <code>string responseCode = 2;</code>
+       * @param value The responseCode to set.
+       * @return This builder for chaining.
        */
       public Builder setResponseCode(
           java.lang.String value) {
@@ -5847,6 +5799,7 @@ public final class Farmacia {
       }
       /**
        * <code>string responseCode = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearResponseCode() {
         
@@ -5856,6 +5809,8 @@ public final class Farmacia {
       }
       /**
        * <code>string responseCode = 2;</code>
+       * @param value The bytes for responseCode to set.
+       * @return This builder for chaining.
        */
       public Builder setResponseCodeBytes(
           com.google.protobuf.ByteString value) {
@@ -5871,7 +5826,7 @@ public final class Farmacia {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5975,47 +5930,39 @@ public final class Farmacia {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016farmacia.proto\"V\n\013AltaRequest\022\n\n\002id\030\001 " +
-      "\001(\t\022\016\n\006nombre\030\002 \001(\t\022\016\n\006codigo\030\003 \001(\t\022\r\n\005d" +
-      "roga\030\004 \001(\t\022\014\n\004tipo\030\005 \001(\t\"\031\n\013BajaRequest\022" +
-      "\n\n\002id\030\001 \001(\t\"-\n\017AltaTipoRequest\022\n\n\002id\030\001 \001" +
-      "(\t\022\016\n\006nombre\030\002 \001(\t\"+\n\017BajaTipoRequest\022\n\n" +
-      "\002id\030\001 \001(\t\022\014\n\004baja\030\002 \001(\t\"B\n\017BusquedaReque" +
-      "st\022\016\n\006buscar\030\001 \001(\t\022\016\n\006filtro\030\002 \001(\t\022\017\n\007co" +
-      "lumna\030\003 \001(\t\"\025\n\023ListadoMedicamentos\"\020\n\016Li" +
-      "stadoCodigos\"*\n\030DigitoVerificadorRequest" +
-      "\022\016\n\006digito\030\001 \001(\t\"<\n\013APIResponse\022\027\n\017respo" +
-      "nseMessage\030\001 \001(\t\022\024\n\014responseCode\030\002 \001(\t2\212" +
-      "\003\n\010farmacia\022\"\n\004alta\022\014.AltaRequest\032\014.APIR" +
-      "esponse\022\"\n\004baja\022\014.BajaRequest\032\014.APIRespo" +
-      "nse\022*\n\010altaTipo\022\020.AltaTipoRequest\032\014.APIR" +
-      "esponse\022*\n\010bajaTipo\022\020.BajaTipoRequest\032\014." +
-      "APIResponse\0224\n\022busquedaPorPalabra\022\020.Busq" +
-      "uedaRequest\032\014.APIResponse\0229\n\023listadoMedi" +
-      "camentos\022\024.ListadoMedicamentos\032\014.APIResp" +
-      "onse\022/\n\016listadoCodigos\022\017.ListadoCodigos\032" +
-      "\014.APIResponse\022<\n\021digitoVerificador\022\031.Dig" +
-      "itoVerificadorRequest\032\014.APIResponseB\026\n\024c" +
-      "om.distribuidos.rcpb\006proto3"
+      "\n\016farmacia.proto\"J\n\013AltaRequest\022\016\n\006nombr" +
+      "e\030\002 \001(\t\022\016\n\006codigo\030\003 \001(\t\022\r\n\005droga\030\004 \001(\t\022\014" +
+      "\n\004tipo\030\005 \001(\t\"\031\n\013BajaRequest\022\n\n\002id\030\001 \001(\t\"" +
+      "!\n\017AltaTipoRequest\022\016\n\006nombre\030\001 \001(\t\"+\n\017Ba" +
+      "jaTipoRequest\022\n\n\002id\030\001 \001(\t\022\014\n\004baja\030\002 \001(\t\"" +
+      "B\n\017BusquedaRequest\022\016\n\006buscar\030\001 \001(\t\022\016\n\006fi" +
+      "ltro\030\002 \001(\t\022\017\n\007columna\030\003 \001(\t\"\025\n\023ListadoMe" +
+      "dicamentos\"\020\n\016ListadoCodigos\"*\n\030DigitoVe" +
+      "rificadorRequest\022\016\n\006digito\030\001 \001(\t\"<\n\013APIR" +
+      "esponse\022\027\n\017responseMessage\030\001 \001(\t\022\024\n\014resp" +
+      "onseCode\030\002 \001(\t2\212\003\n\010farmacia\022\"\n\004alta\022\014.Al" +
+      "taRequest\032\014.APIResponse\022\"\n\004baja\022\014.BajaRe" +
+      "quest\032\014.APIResponse\022*\n\010altaTipo\022\020.AltaTi" +
+      "poRequest\032\014.APIResponse\022*\n\010bajaTipo\022\020.Ba" +
+      "jaTipoRequest\032\014.APIResponse\0224\n\022busquedaP" +
+      "orPalabra\022\020.BusquedaRequest\032\014.APIRespons" +
+      "e\0229\n\023listadoMedicamentos\022\024.ListadoMedica" +
+      "mentos\032\014.APIResponse\022/\n\016listadoCodigos\022\017" +
+      ".ListadoCodigos\032\014.APIResponse\022<\n\021digitoV" +
+      "erificador\022\031.DigitoVerificadorRequest\032\014." +
+      "APIResponseB\026\n\024com.distribuidos.rcpb\006pro" +
+      "to3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_AltaRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_AltaRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AltaRequest_descriptor,
-        new java.lang.String[] { "Id", "Nombre", "Codigo", "Droga", "Tipo", });
+        new java.lang.String[] { "Nombre", "Codigo", "Droga", "Tipo", });
     internal_static_BajaRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_BajaRequest_fieldAccessorTable = new
@@ -6027,7 +5974,7 @@ public final class Farmacia {
     internal_static_AltaTipoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AltaTipoRequest_descriptor,
-        new java.lang.String[] { "Id", "Nombre", });
+        new java.lang.String[] { "Nombre", });
     internal_static_BajaTipoRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_BajaTipoRequest_fieldAccessorTable = new
