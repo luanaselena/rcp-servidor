@@ -1,15 +1,18 @@
 package com.distribuidos.rcp;
-import com.distribuidos.rcp.repositories.CategoriaRepository;
-import com.distribuidos.rcp.repositories.MedicamentoRepository;
-import com.distribuidos.rcp.model.MedicamentoModel;
-import io.grpc.stub.StreamObserver;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
-
 import java.util.stream.IntStream;
 
-@Service
+import org.lognet.springboot.grpc.GRpcService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.distribuidos.rcp.model.CategoriaModel;
+import com.distribuidos.rcp.model.MedicamentoModel;
+import com.distribuidos.rcp.repositories.CategoriaRepository;
+import com.distribuidos.rcp.repositories.MedicamentoRepository;
+
+import io.grpc.stub.StreamObserver;
+
+@GRpcService
 public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
 
     @Autowired
@@ -22,6 +25,12 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
 
     @Override
     public void alta(Farmacia.AltaRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
+    	CategoriaModel categoria = categoriaRepository.findById(1l).get();
+    	
+    	MedicamentoModel medicamento = new MedicamentoModel("asd", "asd", "asd", categoria);
+    	
+    	System.out.println(medicamentoRepository.save(medicamento));
+    	
         String id = request.getId();
         String nombre = request.getNombre();
         String codigo = request.getCodigo();

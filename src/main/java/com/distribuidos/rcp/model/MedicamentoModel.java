@@ -37,4 +37,11 @@ public class MedicamentoModel {
 		this.codigo = codigo;
 		this.droga = droga;
 	}
+	
+	public MedicamentoModel(String nombre, String codigo, String droga, CategoriaModel categoria) {
+		this.nombre = nombre;
+		this.codigo = codigo;
+		this.droga = droga;
+		this.categoria = categoria;
+	}
 }
