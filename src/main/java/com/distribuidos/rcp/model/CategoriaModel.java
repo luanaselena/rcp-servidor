@@ -20,18 +20,20 @@ import lombok.Setter;
 @Entity
 @Table(name = "categoria")
 public class CategoriaModel {
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
 	private long id ;
+	
 	private String nombre ;
+	
 	@Column(columnDefinition = "boolean default false")
 	private boolean baja ;
 
 	public CategoriaModel() {}
 	
-	public CategoriaModel(long id, String nombre) {
-		this.id = id;
+	public CategoriaModel(String nombre) {
 		this.nombre = nombre;
 	}
 

@@ -1,19 +1,17 @@
 package com.distribuidos.rcp;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
-
 import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-
 import com.distribuidos.rcp.model.CategoriaModel;
 import com.distribuidos.rcp.model.MedicamentoModel;
 import com.distribuidos.rcp.repositories.CategoriaRepository;
 import com.distribuidos.rcp.repositories.MedicamentoRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import io.grpc.stub.StreamObserver;
 
 @GRpcService
@@ -32,20 +30,15 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
 
     @Override
     public void alta(Farmacia.AltaRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
-    	CategoriaModel categoria = categoriaRepository.findById(1l);
-    	
-    	MedicamentoModel medicamento = new MedicamentoModel("asd", "asd", "asd", categoria);
-    	
-    	System.out.println(medicamentoRepository.save(medicamento));
-    	
-        String id = request.getId();
         String nombre = request.getNombre();
         String codigo = request.getCodigo();
         String droga = request.getDroga();
         String tipo = request.getTipo();
+        
+        CategoriaModel categoria = categoriaRepository.findByNombre(tipo);
 
         //se guarda el dato que se recibe en la base de datos
-        MedicamentoModel medicamentoModel = medicamentoRepository.save(new MedicamentoModel(nombre,codigo,droga));
+        medicamentoRepository.save(new MedicamentoModel(nombre, codigo, droga, categoria));
 
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
         response.setResponseCode("0").setResponseMessage("Medicamento dado de alta");
@@ -71,11 +64,10 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
 
     @Override
     public void altaTipo(Farmacia.AltaTipoRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
-        String id = request.getId();
-        String nombre = request.getNombre();
+    	String nombre = request.getNombre();
 
         //se da de alta el tipo en la base de datos
-        CategoriaModel categoriaModel = categoriaRepository.save(new CategoriaModel(Integer.valueOf(id),nombre));
+        categoriaRepository.save(new CategoriaModel(nombre));
 
         //se envia la respuesta al servidor
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
@@ -89,9 +81,9 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
         String id = request.getId();
         String baja = request.getBaja();
 
-
-        CategoriaModel categoria = categoriaRepository.findById(Long.valueOf(id));
-        categoria.setBaja(true);
+        //ARREGLAR
+        //CategoriaModel categoria = categoriaRepository.findById(long.valueOf(id));
+        //categoria.setBaja(true);
 
         //se envia la respuesta al servidor
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
