@@ -28,6 +28,8 @@ public class CategoriaModel {
 	@Column(columnDefinition = "boolean default false")
 	private boolean baja ;
 
+	public CategoriaModel() {}
+	
 	public CategoriaModel(long id, String nombre) {
 		this.id = id;
 		this.nombre = nombre;
