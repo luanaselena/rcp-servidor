@@ -28,6 +28,8 @@ public class MedicamentoModel {
 
 	private String droga;
 
+	private boolean baja;
+
 	@ManyToOne
     @JoinColumn(name = "FK_CATEGORIA", nullable = false, updatable = false)
 	private CategoriaModel categoria;
@@ -36,6 +38,7 @@ public class MedicamentoModel {
 		this.nombre = nombre;
 		this.codigo = codigo;
 		this.droga = droga;
+		this.baja = false;
 	}
 	
 	public MedicamentoModel(String nombre, String codigo, String droga, CategoriaModel categoria) {
