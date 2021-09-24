@@ -36,8 +36,6 @@ public class MedicamentoModel {
     @JoinColumn(name = "FK_CATEGORIA", nullable = false, updatable = false)
 	@JsonIgnore
 	private CategoriaModel categoria;
-	
-	public MedicamentoModel() {}
 
 	public MedicamentoModel() {};
 	
