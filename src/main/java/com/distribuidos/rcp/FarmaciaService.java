@@ -202,9 +202,16 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
         for (MedicamentoModel medicamentoModel : medicamentoRepository.findAll()){
             nombresMedicamento.add(medicamentoModel.getNombre());
         }
+        
+        String medicamentosJson = "";
+        try {
+			medicamentosJson = objectMapper.writeValueAsString(nombresMedicamento);
+		} catch (JsonProcessingException e) {
+			throw new RuntimeException("Error serializando medicamentos!");
+		}
 
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        response.setResponseCode("1").setResponseMessage("");
+        response.setResponseCode("1").setResponseMessage(medicamentosJson);
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
     }
