@@ -79,12 +79,20 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     @Override
     public void bajaTipo(Farmacia.BajaTipoRequest request, StreamObserver<Farmacia.APIResponse> responseObserver) {
         String id = request.getId();
-        String baja = request.getBaja();
 
-        //ARREGLAR
-        //CategoriaModel categoria = categoriaRepository.findById(long.valueOf(id));
-        //categoria.setBaja(true);
-
+        CategoriaModel categoria = categoriaRepository.findById(Long.valueOf(id));
+        
+        Boolean baja = categoria.isBaja();
+        
+        if(baja == false) {
+        	categoria.setBaja(true);
+        } else {
+        	categoria.setBaja(false);
+        }
+        
+        categoriaRepository.save(categoria);
+        
+        
         //se envia la respuesta al servidor
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
         response.setResponseCode("1").setResponseMessage("Se efectuo la baja del tipo de medicamento");
@@ -208,14 +216,29 @@ public class FarmaciaService extends farmaciaGrpc.farmaciaImplBase {
     @Override
     public void listadoCodigos(Farmacia.ListadoCodigos request, StreamObserver<Farmacia.APIResponse> responseObserver){
 
-        List<String> nombresCategorias = new ArrayList<>();
-        for (CategoriaModel categoriaModel : categoriaRepository.findAll()){
-            nombresCategorias.add(categoriaModel.getNombre());
-        }
-
+    	List<CategoriaModel> categorias = categoriaRepository.findAll();
+    	
+        String categoriasJson = "";
+        try {
+			categoriasJson = objectMapper.writeValueAsString(categorias);
+		} catch (JsonProcessingException e) {
+			throw new RuntimeException("Error serializando medicamentos!");
+		}
+        
         Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
-        response.setResponseCode("1").setResponseMessage("");
+        response.setResponseCode("1").setResponseMessage(categoriasJson);
         responseObserver.onNext(response.build());
         responseObserver.onCompleted();
+    	
+    	
+//        List<String> nombresCategorias = new ArrayList<>();
+//        for (CategoriaModel categoriaModel : categoriaRepository.findAll()){
+//            nombresCategorias.add(categoriaModel.getNombre());
+//        }
+
+//        Farmacia.APIResponse.Builder response = Farmacia.APIResponse.newBuilder();
+//        response.setResponseCode("1").setResponseMessage("");
+//        responseObserver.onNext(response.build());
+//        responseObserver.onCompleted();
     }
 }

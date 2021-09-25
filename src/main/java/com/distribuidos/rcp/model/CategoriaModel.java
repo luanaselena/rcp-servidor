@@ -37,7 +37,8 @@ public class CategoriaModel {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria")
 	@JsonIgnore
 	private Set<MedicamentoModel> medicamentos = new HashSet<>();
-
+	
+	
 	public long getId() {
 		return id;
 	}

@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Repository
 public interface CategoriaRepository extends JpaRepository<CategoriaModel, Serializable> {
 
-    public abstract CategoriaModel findById(long id);
+    public abstract CategoriaModel findById(Long id);
     
     public abstract CategoriaModel findByNombre(String nombre);
 
